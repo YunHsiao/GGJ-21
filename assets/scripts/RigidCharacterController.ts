@@ -14,12 +14,9 @@ enum ECT {
 const quat_0 = new Quat();
 const v3_0 = new Vec3();
 
-@ccclass('Character.RigidCharacterTest')
-@menu('demo/character/RigidCharacterTest')
-export class RigidCharacterTest extends Component {
-    @property(Animation)
-    animation: Animation = null!;
-
+@ccclass('Character.RigidCharacterController')
+@menu('demo/character/RigidCharacterController')
+export class RigidCharacterController extends Component {
     @property(RigidCharacter)
     character: RigidCharacter = null!;
 
@@ -47,7 +44,7 @@ export class RigidCharacterTest extends Component {
     @property
     jumpRate = 100;
 
-    /** 
+    /**
      * 1 << 0 can not move
      * 1 << 1 can not rotate
      * 1 << 2 can not jump
@@ -119,7 +116,6 @@ export class RigidCharacterTest extends Component {
         // }
 
         this.updateCharacter(dt);
-        // this.updateAnimation(dt);
 
         // reset state
         this._isSpaceDown = false;
@@ -189,46 +185,6 @@ export class RigidCharacterTest extends Component {
     rotationScalar (a: Quat, b: Quat) {
         const cosom = Math.abs(a.x * b.x + a.y * b.y + a.z * b.z + a.w * b.w);
         return cosom;
-    }
-
-    updateAnimation (dt: number) {
-        // is jumping
-        if (this._jumping) {
-            const state0 = this.animation.getState('FG_Jump_Start_A');
-            const state1 = this.animation.getState('FG_Jump_MidAir_A');
-            if (!state0.isPlaying && !state1.isPlaying) this.playAnim('FG_Jump_Start_A', 'FG_Jump_MidAir_A');
-        } else {
-            if (this.character.onGround) {
-                // move or idle
-                if (this._speed > 0) {
-                    // idle -> walk -> run
-                    if (this._speed < this.speed.x) {
-                        const state = this.animation.getState('FG_Walk_A');
-                        if (!state.isPlaying) this.animation.crossFade('FG_Walk_A');
-                    } else {
-                        const state = this.animation.getState('FG_Run_A');
-                        if (!state.isPlaying) this.animation.crossFade('FG_Run_A');
-                    }
-                } else {
-                    // walk -> idle
-                    const state = this.animation.getState('FG_Idle_A');
-                    if (!state.isPlaying) this.animation.crossFade('FG_Idle_A');
-                }
-            } else {
-                // in air
-                if (!this._jumping) {
-                    const state = this.animation.getState('FG_Jump_MidAir_A');
-                    if (!state.isPlaying) this.animation.play('FG_Jump_MidAir_A');
-                }
-            }
-        }
-    }
-
-    playAnim (name: string, next: string) {
-        this.animation.play(name);
-        this.animation.once(Animation.EventType.LASTFRAME, () => {
-            this.animation.play(next);
-        }, this);
     }
 
     onClickJump () {

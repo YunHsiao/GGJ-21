@@ -156,6 +156,10 @@ export class RigidCharacter extends Component {
         this._rigidBody.getLinearVelocity(this._velocity);
     }
 
+    getVelocity (out: Vec3) {
+        this._rigidBody.getLinearVelocity(out);
+    }
+
     updateContactInfo () {
         this._grounded = false;
         this._groundContact = null!;
