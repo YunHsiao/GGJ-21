@@ -1,6 +1,6 @@
 import {
     _decorator, builtinResMgr, gfx, Material, ModelComponent,
-    SpriteFrame, Texture2D, utils, Vec3, Mesh, Vec4, js,
+    SpriteFrame, Texture2D, utils, Vec3, Mesh, Vec4,
 } from 'cc';
 const { ccclass, property } = _decorator;
 
