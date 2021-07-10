@@ -996,7 +996,7 @@
     "fileId": "50ulNdYbRDiIxswsbRUFKf"
   },
   {
-    "__type__": "AnimationStateMachine",
+    "__type__": "SequenceAnimationState",
     "model": {
       "__id__": 24
     },
@@ -1064,7 +1064,7 @@
     }
   },
   {
-    "__type__": "AnimationStateMachine",
+    "__type__": "SequenceAnimationState",
     "model": {
       "__id__": 29
     },

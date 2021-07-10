@@ -1,5 +1,7 @@
-import { ccenum, _decorator, Texture2D, Vec4 } from 'cc';
-const { ccclass, property } = _decorator;
+import { ccenum } from 'cc';
+import { fillParams, ISequenceAnimationInfo, PlaybackMode, SequenceAnimationInfo } from './sequence-animation';
+
+const GLIDING_PREP_TIME = 0.5;
 
 export enum CharacterStates {
     RUNNING,
@@ -11,42 +13,7 @@ export enum CharacterStates {
 }
 ccenum(CharacterStates);
 
-export enum PlaneStates {
-    HIDDEN,
-    GLIDING_START,
-    GLIDING_END,
-}
-ccenum(PlaneStates);
-
-enum PlaybackMode {
-    LOCAL_LOOP,
-    LOCAL_ONCE,
-    GLOBAL_LOOP,
-}
-
-@ccclass('SequenceAnimationInfo')
-export class SequenceAnimationInfo {
-    @property(Texture2D)
-    texture: Texture2D = null;
-
-    params = new Vec4(4.1, 4, PlaybackMode.LOCAL_LOOP, 0);
-    duration = 1;
-    nextState = -1;
-}
-
-interface IAnimationInfo {
-    width: number;
-    height: number;
-    frames?: number;        // default to (w * h)
-    mode?: PlaybackMode;    // default to LOCAL_LOOP
-    startFrom?: number;     // default to 0, start playing from relative position [0 - 1]
-    duration?: number;      // default to 1, how long (in seconds) will the clip lasts, zero pauses, negative rewinds
-    nextState?: number;     // default to none
-}
-
-const GLIDING_PREP_TIME = 0.5;
-
-const characterAnimInfoMap: Record<CharacterStates, IAnimationInfo> = {
+const characterAnimInfoMap: Record<CharacterStates, ISequenceAnimationInfo> = {
     [CharacterStates.RUNNING]: {
         width: 4, height: 3, frames: 11,
         mode: PlaybackMode.GLOBAL_LOOP,
@@ -78,7 +45,14 @@ const characterAnimInfoMap: Record<CharacterStates, IAnimationInfo> = {
     },
 };
 
-const planeAnimInfoMap: Record<PlaneStates, IAnimationInfo> = {
+export enum PlaneStates {
+    HIDDEN,
+    GLIDING_START,
+    GLIDING_END,
+}
+ccenum(PlaneStates);
+
+const planeAnimInfoMap: Record<PlaneStates, ISequenceAnimationInfo> = {
     [PlaneStates.HIDDEN]: {
         width: 3, height: 6,
         mode: PlaybackMode.LOCAL_ONCE,
@@ -97,21 +71,6 @@ const planeAnimInfoMap: Record<PlaneStates, IAnimationInfo> = {
         duration: GLIDING_PREP_TIME,
     },
 };
-
-function fillParams (src: IAnimationInfo, dst: SequenceAnimationInfo) {
-    const duration = src.duration !== undefined ? src.duration : 1;
-    const mode = src.mode !== undefined ? src.mode : PlaybackMode.LOCAL_LOOP;
-    const frames = src.frames !== undefined ? src.frames : src.width * src.height;
-    const startFrom = src.startFrom !== undefined ? src.startFrom : 0;
-    const nextState = src.nextState !== undefined ? src.nextState : -1;
-
-    dst.params.x = src.width + src.height * 0.1;
-    dst.params.y = frames;
-    dst.params.z = mode;
-    dst.params.w = mode === PlaybackMode.GLOBAL_LOOP ? duration : startFrom;
-    dst.duration = mode === PlaybackMode.GLOBAL_LOOP ? 0 : duration;
-    dst.nextState = nextState;
-}
 
 export function fillCharacterParams (infos: SequenceAnimationInfo[]) {
     for (let i = 0; i < infos.length; ++i) {
