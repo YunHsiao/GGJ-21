@@ -85,6 +85,7 @@ export class RigidCharacter extends Component {
     _velocity = new Vec3();
     _jumpDir = new Vec3();
 
+    get rigidBody () { return this._rigidBody; }
     get onGround () { return this._grounded; }
     get velocity () { return this._velocity; }
     get toSteep () { return this._toSteep; }
@@ -134,10 +135,10 @@ export class RigidCharacter extends Component {
     }
 
     updateFunction (dt: number) {
+        this.saveState();
         this.updateContactInfo();
         this.applyGravity();
         this.applyDamping();
-        this.saveState();
     }
 
     applyDamping (dt = 1 / 60) {

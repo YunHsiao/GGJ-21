@@ -55,6 +55,9 @@ export class RigidCharacterController extends Component {
     flyThreshold = 1e-1;
 
     @property
+    sencondaryJumpImpulse = new Vec3(0, 10, 0);
+
+    @property
     gravity = new Vec2(-20, -10);
 
     @property
@@ -160,6 +163,7 @@ export class RigidCharacterController extends Component {
                 this._isCancelFlying = false;
                 this.character.gravity = this.gravity.y;
                 this.character.maxSpeed = this.maxMoveSpeed.y;
+                this.character.rigidBody.applyImpulse(this.sencondaryJumpImpulse);
             }
         } else if (this._flying === 1 && (this._isCancelFlying || this.character.contacted)) {
             this._flying = 2;
