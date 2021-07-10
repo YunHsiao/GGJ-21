@@ -1,6 +1,6 @@
 import {
     _decorator, builtinResMgr, gfx, Material,
-    SpriteFrame, Texture2D, utils, Vec3, Mesh, Vec4, ccenum, MeshRenderer,
+    SpriteFrame, Texture2D, utils, Vec3, Mesh, ccenum, MeshRenderer, CCBoolean,
 } from 'cc';
 const { ccclass, property } = _decorator;
 
@@ -63,9 +63,6 @@ export class UnlitQuadComponent extends MeshRenderer {
     @property(Texture2D)
     public _texture: Texture2D | null = null;
 
-    @property
-    public _autoResizeAxis = ResizeAxis.Y;
-
     @property({ type: Texture2D })
     set texture (val) {
         this._texture = val;
@@ -84,12 +81,20 @@ export class UnlitQuadComponent extends MeshRenderer {
         return this._sprite;
     }
 
-    @property({ type: ResizeAxis })
-    set autoResize (val: ResizeAxis) {
-        this._autoResizeAxis = val;
+    @property({ type: CCBoolean })
+    set resizeX (val: boolean) {
+        this.updateSizeRatio(ResizeAxis.X);
     }
-    get autoResize () {
-        return this._autoResizeAxis;
+    get resizeX () {
+        return false;
+    }
+
+    @property({ type: CCBoolean })
+    set resizeY (val: boolean) {
+        this.updateSizeRatio(ResizeAxis.Y);
+    }
+    get resizeY () {
+        return false;
     }
 
     @property
@@ -126,12 +131,6 @@ export class UnlitQuadComponent extends MeshRenderer {
         if (typeof binding !== 'number') { return; }
         const target = this._sprite ? this._sprite : this._texture ? this._texture : builtinResMgr.get<Texture2D>('grey-texture');
         pass!.bindTexture(binding, target.getGFXTexture());
-        // update node scale
-        switch (this._autoResizeAxis) {
-            case ResizeAxis.X: this.node.setScale(target.width / target.height, 1, 1); break;
-            case ResizeAxis.Y: this.node.setScale(1, target.height / target.width, 1); break;
-            default: break;
-        }
         // update UV (handle atlas)
         const model = this.model && this.model.subModels[0];
         const ia = model && model.inputAssembler;
@@ -148,6 +147,17 @@ export class UnlitQuadComponent extends MeshRenderer {
         const vb = ia.vertexBuffers[0];
         utils.writeBuffer(new DataView(vbuffer as ArrayBuffer), uv, format, offset, vb.stride);
         vb.update(vbuffer!);
+    }
+
+    public updateSizeRatio (axis: ResizeAxis) {
+        const target = this._sprite ? this._sprite : this._texture ? this._texture : null;
+        const ratio = target ? target.width / target.height : 1;
+        const scale = this.node.scale;
+        switch (axis) {
+            case ResizeAxis.X: this.node.setScale(scale.y * ratio, scale.y, scale.z); break;
+            case ResizeAxis.Y: this.node.setScale(scale.x, scale.x / ratio, scale.z); break;
+            default: break;
+        }
     }
 
     /////////////////// OVERRIDES ///////////////////
