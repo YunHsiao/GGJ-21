@@ -47,7 +47,7 @@ const disableBlend = {
     } ] },
 };
 
-enum ResizeAxis {
+export enum ResizeAxis {
     NONE,
     X,
     Y
