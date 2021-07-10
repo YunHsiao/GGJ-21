@@ -44,6 +44,8 @@ interface IAnimationInfo {
     nextState?: number;     // default to none
 }
 
+const GLIDING_PREP_TIME = 0.5;
+
 const characterAnimInfoMap: Record<CharacterStates, IAnimationInfo> = {
     [CharacterStates.RUNNING]: {
         width: 4, height: 1,
@@ -66,7 +68,7 @@ const characterAnimInfoMap: Record<CharacterStates, IAnimationInfo> = {
     [CharacterStates.GLIDING]: {
         width: 2, height: 2,
         mode: PlaybackMode.LOCAL_ONCE,
-        duration: 1,
+        duration: GLIDING_PREP_TIME,
         nextState: CharacterStates.GLIDING_LOOP,
     },
     [CharacterStates.GLIDING_LOOP]: {
@@ -87,12 +89,12 @@ const planeAnimInfoMap: Record<PlaneStates, IAnimationInfo> = {
         width: 3, height: 6,
         mode: PlaybackMode.LOCAL_ONCE,
         startFrom: 1,
-        duration: -1,
+        duration: -GLIDING_PREP_TIME,
     },
     [PlaneStates.GLIDING_END]: {
         width: 3, height: 6,
         mode: PlaybackMode.LOCAL_ONCE,
-        duration: 1,
+        duration: GLIDING_PREP_TIME,
     },
 };
 
