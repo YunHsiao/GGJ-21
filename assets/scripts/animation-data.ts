@@ -48,9 +48,9 @@ const GLIDING_PREP_TIME = 0.5;
 
 const characterAnimInfoMap: Record<CharacterStates, IAnimationInfo> = {
     [CharacterStates.RUNNING]: {
-        width: 4, height: 1,
+        width: 4, height: 3, frames: 11,
         mode: PlaybackMode.GLOBAL_LOOP,
-        duration: 0.5,
+        duration: 1,
     },
     [CharacterStates.JUMPING]: {
         width: 4, height: 2,
