@@ -1,6 +1,6 @@
 import {
-    _decorator, builtinResMgr, gfx, Material, ModelComponent,
-    SpriteFrame, Texture2D, utils, Vec3, Mesh, Vec4, ccenum,
+    _decorator, builtinResMgr, gfx, Material,
+    SpriteFrame, Texture2D, utils, Vec3, Mesh, Vec4, ccenum, MeshRenderer,
 } from 'cc';
 const { ccclass, property } = _decorator;
 
@@ -55,7 +55,7 @@ enum ResizeAxis {
 ccenum(ResizeAxis);
 
 @ccclass('UnlitQuadComponent')
-export class UnlitQuadComponent extends ModelComponent {
+export class UnlitQuadComponent extends MeshRenderer {
 
     @property(SpriteFrame)
     public _sprite: SpriteFrame | null = null;
