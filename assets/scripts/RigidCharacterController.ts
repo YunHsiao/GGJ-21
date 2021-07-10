@@ -59,7 +59,7 @@ export class RigidCharacterController extends Component {
     flyThreshold = 1e-1;
 
     @property
-    blockThreshold = 0.8;
+    blockThreshold = 9e-1;
 
     @property
     sencondaryJumpImpulse = new Vec3(0, 10, 0);

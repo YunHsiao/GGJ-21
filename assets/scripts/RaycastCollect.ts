@@ -12,7 +12,7 @@ export class RaycastCollect extends Component {
     castGroup = physics.PhysicsGroup.DEFAULT;
 
     @property
-    maxCastDistance = 1.5;
+    maxCastDistance = 1.15;
 
     hitNormal = new Vec3(0, 1, 0);
 
