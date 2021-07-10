@@ -85,7 +85,7 @@ export class RigidCharacterAnimation extends Component {
 
     setFrontDirection (node: Node, dir: number) {
         const scale = node.scale;
-        node.setScale(Math.abs(scale.x) * (dir < -0.1 ? -1 : 1), scale.y, scale.z);
+        node.setScale(Math.abs(scale.x) * (dir > 0.1 ? 1 : -1), scale.y, scale.z);
     }
 
     setState (state: CharacterStates) {
