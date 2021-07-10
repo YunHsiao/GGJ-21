@@ -97,19 +97,15 @@ CCProgram unlit-vs %{
     CCGetWorldMatrix(matWorld);
 
     #if USE_TEXTURE
-    #if MANUAL_PLAYBACK
-    #endif
       v_uv = a_texCoord;
       #if FLIP_UV
         v_uv.y = 1.0 - v_uv.y;
       #endif
       v_uv = v_uv * tilingOffset.xy + tilingOffset.zw;
       #if USE_SEQUENCE_ANIM
-        #if MANUAL_PLAYBACK
-          float seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, 0.999) * seqAnimParams.z;
-        #else
-          float seqAnimCurFrame = mod(cc_time.x, seqAnimParams.z / seqAnimParams.w) * seqAnimParams.w; // iOS precision issue
-        #endif
+        float seqAnimCurFrame = seqAnimParams.w < 0.0 ?
+          clamp(-seqAnimParams.w, 0.0, 0.999) * seqAnimParams.z :
+          mod(cc_time.x, seqAnimParams.z / seqAnimParams.w) * seqAnimParams.w; // iOS precision issue
         vec2 seqAnimOffset = floor(vec2(mod(seqAnimCurFrame, seqAnimParams.x), seqAnimCurFrame / seqAnimParams.x));
         v_uv = (v_uv + seqAnimOffset) / seqAnimParams.xy;
       #endif
