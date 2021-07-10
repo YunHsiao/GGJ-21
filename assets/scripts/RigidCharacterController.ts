@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, EventKeyboard, macro, systemEvent, SystemEvent, EventMouse, Animation, Quat, Vec3, Vec2, tween, easing, sys, clamp } from 'cc';
+import { _decorator, Component, Node, EventKeyboard, macro, systemEvent, SystemEvent, Quat, Vec3, Vec2, clamp } from 'cc';
 import { RigidCharacter } from './RigidCharacter';
 const { ccclass, property, menu } = _decorator;
 const SystemEventType = SystemEvent.EventType;

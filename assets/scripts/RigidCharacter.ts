@@ -1,7 +1,7 @@
-import { _decorator, Component, Node, RigidBody, Vec3, PhysicsSystem, ICollisionEvent, Collider, IContactEquation, EPSILON } from 'cc';
+import { _decorator, Component, RigidBody, Vec3, PhysicsSystem, ICollisionEvent, Collider, IContactEquation } from 'cc';
 const { ccclass, property, requireComponent, menu } = _decorator;
 const _v3_0 = new Vec3();
-const _v3_1 = new Vec3();
+
 class ContactPoint {
     point = new Vec3();
     normal = new Vec3();
