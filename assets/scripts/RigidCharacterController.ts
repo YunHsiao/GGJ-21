@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, EventKeyboard, macro, systemEvent, SystemEvent, Quat, Vec3, Vec2, clamp, director } from 'cc';
+import { RaycastCollect } from './RaycastCollect';
 import { RigidCharacter } from './RigidCharacter';
 const { ccclass, property, menu } = _decorator;
 const SystemEventType = SystemEvent.EventType;
@@ -58,6 +59,9 @@ export class RigidCharacterController extends Component {
     flyThreshold = 1e-1;
 
     @property
+    blockThreshold = 0.8;
+
+    @property
     sencondaryJumpImpulse = new Vec3(0, 10, 0);
 
     @property
@@ -68,6 +72,7 @@ export class RigidCharacterController extends Component {
 
     get isFlying () { return this._flying; }
     get canFly () { return this.flyThreshold > this.character.velocity.y; }
+    get isBlock () { return Math.abs(this._raycast.hitNormal.z) >= this.blockThreshold; }
 
     /**
      * 1 << 0 can not move
@@ -85,6 +90,11 @@ export class RigidCharacterController extends Component {
     protected _isCancelFlying = false;
     protected _startAccelerationTime = 0;
     protected _JumpRefreshTime = 0;
+    protected _raycast: RaycastCollect = null!;
+
+    onLoad () {
+        this._raycast = this.addComponent(RaycastCollect);
+    }
 
     protected onEnable () {
         systemEvent.on(SystemEventType.KEY_DOWN, this.onKeyDown, this);
@@ -131,6 +141,8 @@ export class RigidCharacterController extends Component {
 
     update (dtS: number) {
         const dt = 1000 / 60;
+        this._raycast.updateFunction();
+        this.character.updateFunction(dt);
         this.updateCharacter(dt);
 
         // reset state
@@ -138,8 +150,6 @@ export class RigidCharacterController extends Component {
     }
 
     updateCharacter (dt: number) {
-        this.character.updateFunction(dt);
-
         // on ground
         if (this.character.onGround) {
             this._JumpRefreshTime -= dt;
@@ -189,6 +199,7 @@ export class RigidCharacterController extends Component {
 
         // move
         if (this.moveEnable && director.getTotalFrames() % this.moveFrameInterval == 0) {
+            if (this.isBlock) return;
             if (!this.moveInAir && !this.character.onGround && this._flying !== 1) return;
             if (this.moveConstant) this._stateX = this.negativeX ? -1 : 1;
             if (this._stateX || this._stateZ) {
@@ -204,6 +215,9 @@ export class RigidCharacterController extends Component {
                     const rs = clamp(this.rotationScalar(qm, qf), 0, 1);
                     this.character.move(v3_0, this.moveSpeed * rs);
                 } else {
+                    // Vec3.cross(v3_0, v3_0, this.character.contactNormal);
+                    // Vec3.cross(v3_0, this.character.contactNormal, v3_0);
+                    // v3_0.normalize();
                     this.character.move(v3_0, this.moveSpeed);
                 }
             }
