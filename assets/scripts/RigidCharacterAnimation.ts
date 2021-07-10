@@ -51,17 +51,16 @@ export class RigidCharacterAnimation extends Component {
 
         const curAnim = this.characterASM.animInfo[this.characterASM.state];
         if (curAnim.nextState >= 0 && this.characterASM.stagingParam.w > 1) {
-            this.setState(curAnim.nextState);
-        }
-
-        if (this.character.onGround || this.velAcc < 0.001) {
+            this.setState(curAnim.nextState); // switch to next state if finished
+        } else if (this.character.onGround || this.velAcc < 0.001) {
             this.setState(CharacterStates.RUNNING);
         } else if (this.characterController.isFlying === 1) {
             this.setState(CharacterStates.GLIDING);
         } else {
             this.setState(CharacterStates.JUMPING);
         }
-        
+
+        // upload uniforms
         this.characterASM.model.material.setProperty('seqAnimParams', this.characterASM.stagingParam);
         this.planeASM.model.material.setProperty('seqAnimParams', this.planeASM.stagingParam);
     }
@@ -88,7 +87,6 @@ export class RigidCharacterAnimation extends Component {
 
         if (!this.isPlaying(this.characterASM.animInfo, this.characterASM.state, state)) {
             const characterAnim = this.characterASM.animInfo[state];
-            console.log(state);
             this.characterASM.model.material.setProperty('mainTexture', characterAnim.texture);
             Vec4.copy(this.characterASM.stagingParam, characterAnim.params);
             this.characterASM.duration = characterAnim.duration;
