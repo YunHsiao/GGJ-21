@@ -183,14 +183,4 @@ export class UnlitQuadComponent extends MeshRenderer {
     set receiveShadow (val) {
         super.receiveShadow = val;
     }
-
-    @property({ override: true, visible: false })
-    public lightmapSettings = {
-        texture: null,
-        uvParam: new Vec4(),
-        bakeable: false,
-        castShadow: false,
-        receiveShadow: false,
-        lightmapSize: 64
-    } as any;
 }
