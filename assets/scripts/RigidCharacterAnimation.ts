@@ -78,6 +78,8 @@ export class RigidCharacterAnimation extends Component {
 
         if (this.character.onGround) {
             this.setState(CharacterStates.RUNNING);
+        } else if (this.character.gravity > -20) {
+            this.setState(CharacterStates.GLIDING);
         } else {
             this.setState(CharacterStates.JUMPING);
         }
@@ -89,7 +91,7 @@ export class RigidCharacterAnimation extends Component {
     }
 
     setState (state: CharacterStates) {
-        let planeState = PlaneStates.HIDDEN;
+        let planeState = this.planeASM.state === PlaneStates.GLIDING_END ? PlaneStates.GLIDING_END : PlaneStates.HIDDEN;
         if (this.isPlaying(this.characterASM.animInfo, state, CharacterStates.GLIDING)) {
             planeState = PlaneStates.GLIDING_START;
         } else if (this.isPlaying(this.characterASM.animInfo, this.characterASM.state, CharacterStates.GLIDING)) {
