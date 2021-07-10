@@ -32,6 +32,8 @@ export class RigidCharacterAnimation extends Component {
     @property(AnimationStateMachine)
     planeASM = new AnimationStateMachine();
 
+    velAcc = 0;
+
     onLoad () {
         fillCharacterParams(this.characterASM.animInfo);
         fillPlaneParams(this.planeASM.animInfo);
@@ -41,25 +43,27 @@ export class RigidCharacterAnimation extends Component {
         this.character.getVelocity(vel);
         this.setFrontDirection(this.characterASM.model.node, vel.z);
         this.setFrontDirection(this.planeASM.model.node, vel.z);
+        this.velAcc = this.velAcc * 0.5 + Math.abs(vel.y) * 0.5;
 
         // update time
         if (this.characterASM.duration) this.characterASM.stagingParam.w += dt / this.characterASM.duration;
-        this.characterASM.model.material.setProperty('seqAnimParams', this.characterASM.stagingParam);
         if (this.planeASM.duration) this.planeASM.stagingParam.w += dt / this.planeASM.duration;
-        this.planeASM.model.material.setProperty('seqAnimParams', this.planeASM.stagingParam);
 
         const curAnim = this.characterASM.animInfo[this.characterASM.state];
         if (curAnim.nextState >= 0 && this.characterASM.stagingParam.w > 1) {
             this.setState(curAnim.nextState);
         }
 
-        if (this.character.onGround) {
+        if (this.character.onGround || this.velAcc < 0.001) {
             this.setState(CharacterStates.RUNNING);
         } else if (this.characterController.isFlying === 1) {
             this.setState(CharacterStates.GLIDING);
         } else {
             this.setState(CharacterStates.JUMPING);
         }
+        
+        this.characterASM.model.material.setProperty('seqAnimParams', this.characterASM.stagingParam);
+        this.planeASM.model.material.setProperty('seqAnimParams', this.planeASM.stagingParam);
     }
 
     setFrontDirection (node: Node, dir: number) {
@@ -84,6 +88,7 @@ export class RigidCharacterAnimation extends Component {
 
         if (!this.isPlaying(this.characterASM.animInfo, this.characterASM.state, state)) {
             const characterAnim = this.characterASM.animInfo[state];
+            console.log(state);
             this.characterASM.model.material.setProperty('mainTexture', characterAnim.texture);
             Vec4.copy(this.characterASM.stagingParam, characterAnim.params);
             this.characterASM.duration = characterAnim.duration;
