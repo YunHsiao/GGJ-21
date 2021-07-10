@@ -60,7 +60,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 1.401,
-      "z": 0
+      "z": -10.791
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -155,8 +155,8 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -7,
-      "y": 1,
-      "z": 10
+      "y": 2,
+      "z": 5
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -552,7 +552,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 2,
+    "_orthoHeight": 6,
     "_near": 1,
     "_far": 1000,
     "_color": {
@@ -567,9 +567,9 @@
     "_clearFlags": 7,
     "_rect": {
       "__type__": "cc.Rect",
-      "x": 0.5,
+      "x": 0,
       "y": 0,
-      "width": 0.5,
+      "width": 1,
       "height": 1
     },
     "_aperture": 19,
