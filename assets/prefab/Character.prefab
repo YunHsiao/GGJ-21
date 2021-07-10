@@ -50,11 +50,11 @@
         "__id__": 37
       },
       {
-        "__id__": 41
+        "__id__": 45
       }
     ],
     "_prefab": {
-      "__id__": 43
+      "__id__": 47
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -867,6 +867,18 @@
       },
       {
         "__id__": 40
+      },
+      {
+        "__id__": 41
+      },
+      {
+        "__id__": 42
+      },
+      {
+        "__id__": 43
+      },
+      {
+        "__id__": 44
       }
     ],
     "_id": ""
@@ -891,10 +903,57 @@
   },
   {
     "__type__": "cc.SequenceAnimationInfo",
+    "texture": null,
+    "params": {
+      "__type__": "cc.Vec4",
+      "x": 4,
+      "y": 1,
+      "z": 4,
+      "w": 10
+    }
+  },
+  {
+    "__type__": "cc.SequenceAnimationInfo",
     "texture": {
-      "__uuid__": "d48becd2-4462-4820-842f-2da57cebba93@6c48a",
+      "__uuid__": "fbff6158-31e5-4c9f-9e38-74cf15fb77aa@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
+    "params": {
+      "__type__": "cc.Vec4",
+      "x": 2,
+      "y": 1,
+      "z": 2,
+      "w": 10
+    }
+  },
+  {
+    "__type__": "cc.SequenceAnimationInfo",
+    "texture": {
+      "__uuid__": "9d24aacf-889c-48b2-a2dc-fc91ae8cbdc4@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    },
+    "params": {
+      "__type__": "cc.Vec4",
+      "x": 5,
+      "y": 1,
+      "z": 5,
+      "w": 10
+    }
+  },
+  {
+    "__type__": "cc.SequenceAnimationInfo",
+    "texture": null,
+    "params": {
+      "__type__": "cc.Vec4",
+      "x": 4,
+      "y": 1,
+      "z": 4,
+      "w": 10
+    }
+  },
+  {
+    "__type__": "cc.SequenceAnimationInfo",
+    "texture": null,
     "params": {
       "__type__": "cc.Vec4",
       "x": 4,
@@ -912,7 +971,7 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 42
+      "__id__": 46
     },
     "_id": ""
   },

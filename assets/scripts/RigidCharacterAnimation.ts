@@ -7,6 +7,8 @@ const vel = new Vec3();
 enum AnimationStates {
     RUNNING,
     JUMPING,
+    SLIDING,
+    SLIDING_PREPARE,
     GLIDING,
     CLIMPING,
 }
