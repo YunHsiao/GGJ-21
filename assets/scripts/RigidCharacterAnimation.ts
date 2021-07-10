@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Vec3, Material, MeshRenderer, ccenum, Texture2D, Vec4 } from 'cc';
+import { _decorator, Component, Node, Vec3, MeshRenderer, ccenum, Texture2D, Vec4 } from 'cc';
 import { RigidCharacter } from './RigidCharacter';
 const { ccclass, property, menu } = _decorator;
 
@@ -8,7 +8,9 @@ enum CharacterStates {
     RUNNING,
     JUMPING,
     SLIDING,
+    SLIDING_LOOP,
     GLIDING,
+    GLIDING_LOOP,
 }
 ccenum(CharacterStates);
 
@@ -29,6 +31,9 @@ class SequenceAnimationInfo {
 
     @property
     playbackSpeed = 1;
+
+    @property
+    nextState = -1;
 }
 
 @ccclass('AnimationStateMachine')
@@ -59,17 +64,23 @@ export class RigidCharacterAnimation extends Component {
         this.character.getVelocity(vel);
         this.setFrontDirection(this.characterASM.model.node, vel.z);
         this.setFrontDirection(this.planeASM.model.node, vel.z);
+
+        // update time
+        this.planeASM.stagingParam.w += this.planeASM.playbackSpeed * 0.1;
+        this.planeASM.model.material.setProperty('seqAnimParams', this.planeASM.stagingParam);
+        this.characterASM.stagingParam.w += this.characterASM.playbackSpeed * 0.1;
+        this.characterASM.model.material.setProperty('seqAnimParams', this.characterASM.stagingParam);
+
+        const curAnim = this.characterASM.animInfo[this.characterASM.state];
+        if (curAnim.nextState >= 0 && this.characterASM.stagingParam.w > curAnim.params.y) {
+            this.setState(curAnim.nextState);
+        }
+
         if (this.character.onGround) {
             this.setState(CharacterStates.RUNNING);
         } else {
             this.setState(CharacterStates.JUMPING);
         }
-
-        // update time
-        this.planeASM.stagingParam.w += this.planeASM.playbackSpeed * 0.03;
-        this.planeASM.model.material.setProperty('seqAnimParams', this.planeASM.stagingParam);
-        this.characterASM.stagingParam.w += this.characterASM.playbackSpeed * 0.03;
-        this.characterASM.model.material.setProperty('seqAnimParams', this.characterASM.stagingParam);
     }
 
     setFrontDirection (node: Node, dir: number) {
@@ -78,7 +89,7 @@ export class RigidCharacterAnimation extends Component {
     }
 
     setState (state: CharacterStates) {
-        if (this.characterASM.state !== state) {
+        if (!this.isPlaying(this.characterASM.animInfo, this.characterASM.state, state)) {
             const characterAnim = this.characterASM.animInfo[state];
             this.characterASM.model.material.setProperty('mainTexture', characterAnim.texture);
             Vec4.copy(this.characterASM.stagingParam, characterAnim.params);
@@ -86,13 +97,23 @@ export class RigidCharacterAnimation extends Component {
             this.characterASM.state = state;
         }
 
-        const planeState = state === CharacterStates.GLIDING ? PlaneStates.GLIDING_START : PlaneStates.GLIDING_END;
-        if (this.planeASM.state !== planeState) {
+        const planeState = this.isPlaying(this.characterASM.animInfo, state, CharacterStates.GLIDING)
+            ? PlaneStates.GLIDING_START : PlaneStates.GLIDING_END;
+        if (!this.isPlaying(this.planeASM.animInfo, this.planeASM.state, planeState)) { // no chaining for now
             const planeAnim = this.planeASM.animInfo[planeState];
             this.planeASM.model.material.setProperty('mainTexture', planeAnim.texture);
             Vec4.copy(this.planeASM.stagingParam, planeAnim.params);
             this.planeASM.playbackSpeed = planeAnim.playbackSpeed;
             this.planeASM.state = planeState;
         }
+    }
+
+    // is the ASM current in the target animation chain?
+    isPlaying (info: SequenceAnimationInfo[], current: number, target: number) {
+        while (current !== target) {
+            target = info[target].nextState;
+            if (target < 0) return false;
+        }
+        return true;
     }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.21",
   "importer": "image",
   "imported": true,
-  "uuid": "c53df9ac-27c2-4429-9add-3078b067f401",
+  "uuid": "9e0dfa2d-5796-43a0-b618-f624846bf735",
   "files": [
     ".jpg",
     ".json"
@@ -10,8 +10,8 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "c53df9ac-27c2-4429-9add-3078b067f401@6c48a",
-      "displayName": "gliding-plane",
+      "uuid": "9e0dfa2d-5796-43a0-b618-f624846bf735@6c48a",
+      "displayName": "gliding-loop",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "c53df9ac-27c2-4429-9add-3078b067f401"
+        "imageUuidOrDatabaseUri": "9e0dfa2d-5796-43a0-b618-f624846bf735"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -35,6 +35,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "texture",
-    "redirect": "c53df9ac-27c2-4429-9add-3078b067f401@6c48a"
+    "redirect": "9e0dfa2d-5796-43a0-b618-f624846bf735@6c48a"
   }
 }

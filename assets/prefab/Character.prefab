@@ -53,11 +53,11 @@
         "__id__": 42
       },
       {
-        "__id__": 53
+        "__id__": 55
       }
     ],
     "_prefab": {
-      "__id__": 55
+      "__id__": 57
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -732,8 +732,8 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 1,
-      "z": 0
+      "y": 2.213,
+      "z": -0.654
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -744,9 +744,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1.12677,
-      "z": 1
+      "x": 2.836,
+      "y": 3.196,
+      "z": 2.836
     },
     "_layer": 1073741824,
     "_euler": {
@@ -770,7 +770,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "34bac69c-440e-4f79-a3c2-1514ae14811c",
+        "__uuid__": "42246c2b-890c-4c3e-888f-14b8f2c15804",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -910,7 +910,7 @@
     "__type__": "Character.JumpParam",
     "perpRatio": 0,
     "steepPerpRatio": 0,
-    "height": 10,
+    "height": 20,
     "maxHeight": 1.5
   },
   {
@@ -950,7 +950,7 @@
     "gravity": {
       "__type__": "cc.Vec2",
       "x": -20,
-      "y": 0
+      "y": -10
     },
     "jumpRate": 100,
     "_id": ""
@@ -977,7 +977,7 @@
       "__id__": 44
     },
     "planeASM": {
-      "__id__": 49
+      "__id__": 51
     },
     "_id": ""
   },
@@ -1002,6 +1002,12 @@
       },
       {
         "__id__": 48
+      },
+      {
+        "__id__": 49
+      },
+      {
+        "__id__": 50
       }
     ]
   },
@@ -1018,7 +1024,8 @@
       "z": 2,
       "w": 1
     },
-    "playbackSpeed": 0
+    "playbackSpeed": 0,
+    "nextState": -1
   },
   {
     "__type__": "SequenceAnimationInfo",
@@ -1030,7 +1037,24 @@
       "z": 0,
       "w": 0
     },
-    "playbackSpeed": 1
+    "playbackSpeed": 1,
+    "nextState": -1
+  },
+  {
+    "__type__": "SequenceAnimationInfo",
+    "texture": {
+      "__uuid__": "9d24aacf-889c-48b2-a2dc-fc91ae8cbdc4@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    },
+    "params": {
+      "__type__": "cc.Vec4",
+      "x": 5.1,
+      "y": 5,
+      "z": 1,
+      "w": 0
+    },
+    "playbackSpeed": 1,
+    "nextState": 3
   },
   {
     "__type__": "SequenceAnimationInfo",
@@ -1045,19 +1069,40 @@
       "z": 0,
       "w": 0
     },
-    "playbackSpeed": 1
+    "playbackSpeed": 1,
+    "nextState": -1
   },
   {
     "__type__": "SequenceAnimationInfo",
-    "texture": null,
+    "texture": {
+      "__uuid__": "2c9120d0-f96a-4edd-a832-c996cc45b303@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    },
     "params": {
       "__type__": "cc.Vec4",
-      "x": 4.1,
+      "x": 2.2,
       "y": 4,
+      "z": 1,
+      "w": 0
+    },
+    "playbackSpeed": 2,
+    "nextState": 5
+  },
+  {
+    "__type__": "SequenceAnimationInfo",
+    "texture": {
+      "__uuid__": "9e0dfa2d-5796-43a0-b618-f624846bf735@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    },
+    "params": {
+      "__type__": "cc.Vec4",
+      "x": 5.4,
+      "y": 19,
       "z": 0,
       "w": 0
     },
-    "playbackSpeed": 1
+    "playbackSpeed": 2,
+    "nextState": -1
   },
   {
     "__type__": "AnimationStateMachine",
@@ -1066,13 +1111,13 @@
     },
     "animInfo": [
       {
-        "__id__": 50
-      },
-      {
-        "__id__": 51
-      },
-      {
         "__id__": 52
+      },
+      {
+        "__id__": 53
+      },
+      {
+        "__id__": 54
       }
     ]
   },
@@ -1087,9 +1132,10 @@
       "x": 3.6,
       "y": 18,
       "z": 1,
-      "w": 1
+      "w": 18
     },
-    "playbackSpeed": 0
+    "playbackSpeed": 0,
+    "nextState": -1
   },
   {
     "__type__": "SequenceAnimationInfo",
@@ -1102,9 +1148,10 @@
       "x": 3.6,
       "y": 18,
       "z": 1,
-      "w": 1
+      "w": 10
     },
-    "playbackSpeed": -1
+    "playbackSpeed": -4,
+    "nextState": -1
   },
   {
     "__type__": "SequenceAnimationInfo",
@@ -1119,7 +1166,8 @@
       "z": 1,
       "w": 0
     },
-    "playbackSpeed": 1
+    "playbackSpeed": 4,
+    "nextState": -1
   },
   {
     "__type__": "276fcld+b5O8qjGJZTPQFke",
@@ -1130,7 +1178,7 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 54
+      "__id__": 56
     },
     "_id": ""
   },

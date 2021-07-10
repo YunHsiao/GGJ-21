@@ -96,9 +96,9 @@ CCProgram unlit-vs %{
           float playbackSpeed = seqAnimParams.w * 7.0;
           seqAnimCurFrame = mod(cc_time.x, seqAnimParams.y / playbackSpeed) * playbackSpeed; // iOS precision issue
         } else if (seqAnimParams.z > 0.1) { // manual clamp
-          seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, 0.999) * seqAnimParams.y;
+          seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, seqAnimParams.y);
         } else { // manual loop
-          seqAnimCurFrame = fract(seqAnimParams.w) * seqAnimParams.y;
+          seqAnimCurFrame = mod(seqAnimParams.w, seqAnimParams.y);
         }
         vec2 size = vec2(floor(seqAnimParams.x), fract(seqAnimParams.x) * 10.0);
         vec2 seqAnimOffset = floor(vec2(mod(seqAnimCurFrame, size.x), seqAnimCurFrame / size.x));
