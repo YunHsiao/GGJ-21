@@ -56,9 +56,13 @@ export class UnlitQuadComponent extends ModelComponent {
     @property(Texture2D)
     public _texture: Texture2D | null = null;
 
+    @property
+    public _autoResize = true;
+
     @property({ type: Texture2D })
     set texture (val) {
         this._texture = val;
+        if (this._autoResize) this.node.setScale(val.width / val.height, 1, 1);
         this.updateTexture();
     }
     get texture () {
@@ -68,10 +72,19 @@ export class UnlitQuadComponent extends ModelComponent {
     @property({ type: SpriteFrame })
     set spriteFrame (val) {
         this._sprite = val;
+        if (this._autoResize) this.node.setScale(val.width / val.height, 1, 1);
         this.updateTexture();
     }
     get spriteFrame () {
         return this._sprite;
+    }
+
+    @property
+    set autoResize (val: boolean) {
+        this._autoResize = val;
+    }
+    get autoResize () {
+        return this._autoResize;
     }
 
     @property
