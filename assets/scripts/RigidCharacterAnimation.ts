@@ -44,7 +44,7 @@ export class RigidCharacterAnimation extends Component {
         if (this.character.onGround) {
             this.character.getVelocity(vel);
             const scale = this.sequenceAnim.node.scale;
-            this.sequenceAnim.node.setScale(Math.abs(scale.x) * (vel.z < 0.01 ? -1 : 1), scale.y, scale.z);
+            this.sequenceAnim.node.setScale(Math.abs(scale.x) * (vel.z < -0.1 ? -1 : 1), scale.y, scale.z);
             this.setState(AnimationStates.RUNNING);
         } else {
             this.setState(AnimationStates.JUMPING);

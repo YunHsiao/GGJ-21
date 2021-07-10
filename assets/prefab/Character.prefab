@@ -48,10 +48,13 @@
       },
       {
         "__id__": 37
+      },
+      {
+        "__id__": 41
       }
     ],
     "_prefab": {
-      "__id__": 39
+      "__id__": 43
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -659,7 +662,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "d3c7820c-2a98-4429-8bc7-b8453bc9ac41",
+        "__uuid__": "34bac69c-440e-4f79-a3c2-1514ae14811c",
         "__expectedType__": "cc.Material"
       }
     ],
@@ -812,7 +815,6 @@
     "__prefab": {
       "__id__": 36
     },
-    "animation": null,
     "character": {
       "__id__": 32
     },
@@ -839,7 +841,7 @@
     "fileId": "98qV0ZNKdGx7pzWB4wrBQt"
   },
   {
-    "__type__": "276fcld+b5O8qjGJZTPQFke",
+    "__type__": "da08fpgnp9LvIlbyogdpVbD",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -848,6 +850,65 @@
     "_enabled": true,
     "__prefab": {
       "__id__": 38
+    },
+    "character": {
+      "__id__": 32
+    },
+    "sequenceAnim": {
+      "__id__": 24
+    },
+    "animInfos": [
+      {
+        "__id__": 39
+      },
+      {
+        "__id__": 40
+      }
+    ],
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "50ulNdYbRDiIxswsbRUFKf"
+  },
+  {
+    "__type__": "cc.SequenceAnimationInfo",
+    "texture": {
+      "__uuid__": "d48becd2-4462-4820-842f-2da57cebba93@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    },
+    "params": {
+      "__type__": "cc.Vec4",
+      "x": 4,
+      "y": 1,
+      "z": 4,
+      "w": 10
+    }
+  },
+  {
+    "__type__": "cc.SequenceAnimationInfo",
+    "texture": {
+      "__uuid__": "d48becd2-4462-4820-842f-2da57cebba93@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    },
+    "params": {
+      "__type__": "cc.Vec4",
+      "x": 4,
+      "y": 1,
+      "z": 4,
+      "w": 10
+    }
+  },
+  {
+    "__type__": "276fcld+b5O8qjGJZTPQFke",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 42
     },
     "_id": ""
   },
