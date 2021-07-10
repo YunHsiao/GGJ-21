@@ -82,6 +82,7 @@ export class RigidCharacter extends Component {
     _contacts: ContactPoint[] = [];
     _groundContact: ContactPoint = null!;
     _groundNormal = Vec3.UP.clone();
+    _contactNormal = new Vec3();
     _velocity = new Vec3();
     _jumpDir = new Vec3();
 
@@ -91,6 +92,7 @@ export class RigidCharacter extends Component {
     get toSteep () { return this._toSteep; }
     get isFalling () { return this._velocity.y < -1e-7; }
     get contacted () { return this._contacted; }
+    get contactNormal () { return this._contactNormal; }
 
     start () {
         this._rigidBody = this.getComponent(RigidBody)!;
@@ -130,10 +132,6 @@ export class RigidCharacter extends Component {
         this._rigidBody.setLinearVelocity(_v3_0.multiply(this._rigidBody.linearFactor));
     }
 
-    rush () {
-
-    }
-
     updateFunction (dt: number) {
         this.saveState();
         this.updateContactInfo();
@@ -168,12 +166,14 @@ export class RigidCharacter extends Component {
         this._grounded = false;
         this._contacted = false;
         this._groundContact = null!;
+        this._contactNormal.set(Vec3.ZERO);
         const wp = this.node.worldPosition;
         let maxY = -0.001;
         for (let i = 0; i < this._contacts.length; i++) {
             this._contacted = true;
             const c = this._contacts[i];
             const n = c.normal, p = c.point;
+            this._contactNormal.add(n);
             if (n.y <= 0.0001) continue;
             else {
                 if (n.y > maxY && p.y < wp.y - 0.25) {
@@ -183,6 +183,7 @@ export class RigidCharacter extends Component {
                 }
             }
         }
+        this._contactNormal.normalize();
         if (this._grounded) {
             Vec3.copy(this._groundNormal, this._groundContact.normal);
             this._toSteep = this._groundContact.normal.y <= Math.cos(this.slopeLimit * Math.PI / 180);
