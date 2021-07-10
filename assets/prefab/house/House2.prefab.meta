@@ -2,12 +2,12 @@
   "ver": "1.1.27",
   "importer": "prefab",
   "imported": true,
-  "uuid": "f0bfc5b1-66b0-4658-b7ba-ae88d4e3f0d0",
+  "uuid": "5743dfeb-bea5-4e65-b8b4-7b18f9892be2",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "roof01"
+    "syncNodeName": "House2"
   }
 }

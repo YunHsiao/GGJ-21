@@ -27,12 +27,15 @@
       },
       {
         "__id__": 23
+      },
+      {
+        "__id__": 30
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 30
+      "__id__": 35
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -85,7 +88,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 1,
+      "y": 0.831,
       "z": 0
     },
     "_lrot": {
@@ -98,8 +101,8 @@
     "_lscale": {
       "__type__": "cc.Vec3",
       "x": 1,
-      "y": 2,
-      "z": 3
+      "y": 1.655,
+      "z": 2.83
     },
     "_layer": 1073741824,
     "_euler": {
@@ -224,8 +227,8 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 2.125,
-      "z": -1
+      "y": 2.421,
+      "z": 0.545
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -238,7 +241,7 @@
       "__type__": "cc.Vec3",
       "x": 1,
       "y": 0.25,
-      "z": 1
+      "z": 0.622
     },
     "_layer": 1073741824,
     "_euler": {
@@ -363,15 +366,15 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 2.462,
-      "z": -1.332
+      "y": 2.098,
+      "z": 1.083
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": -0.3826834323650898,
+      "x": 0.4196421977156838,
       "y": 0,
       "z": 0,
-      "w": 0.9238795325112867
+      "w": 0.9076896087850466
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -382,7 +385,7 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": -45,
+      "x": 49.624,
       "y": 0,
       "z": 0
     },
@@ -505,15 +508,15 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 2.45,
-      "z": -0.792
+      "y": 2.08,
+      "z": 0.047
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": 0.3826834323650898,
+      "x": -0.4172009903141826,
       "y": 0,
       "z": 0,
-      "w": 0.9238795325112867
+      "w": 0.9088142459715656
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -524,7 +527,7 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": 45,
+      "x": -49.316,
       "y": 0,
       "z": 0
     },
@@ -623,6 +626,112 @@
       "__id__": 0
     },
     "fileId": "1eyY1PAmFADIFLJz0Fw1cN"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 31
+      }
+    ],
+    "_prefab": {
+      "__id__": 34
+    },
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 1.28,
+      "z": 0.062
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0.7071067811865475,
+      "z": 0,
+      "w": 0.7071067811865476
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 3.078,
+      "y": 2.742,
+      "z": 3.078
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 90,
+      "z": 0
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "93929O83pBANKoOxC3c/52n",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 30
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 32
+    },
+    "_materials": [
+      null
+    ],
+    "_visFlags": 0,
+    "lightmapSettings": {
+      "__id__": 33
+    },
+    "_mesh": null,
+    "_shadowCastingMode": 0,
+    "_shadowReceivingMode": 1,
+    "_enableMorph": true,
+    "_sprite": null,
+    "_texture": {
+      "__uuid__": "65dd0e6f-091b-42cb-a389-dbbf22a14d5e@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    },
+    "_autoResizeAxis": 0,
+    "_transparent": true,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "757gSAKuVL0IiSNkdJHKm3"
+  },
+  {
+    "__type__": "cc.ModelLightmapSettings",
+    "texture": null,
+    "uvParam": {
+      "__type__": "cc.Vec4",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 0
+    },
+    "_bakeable": false,
+    "_castShadow": false,
+    "_receiveShadow": false,
+    "_recieveShadow": false,
+    "_lightmapSize": 64
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__id__": 0
+    },
+    "fileId": "f0XC9kwEZGqZEw7KO+A0/w"
   },
   {
     "__type__": "cc.PrefabInfo",
