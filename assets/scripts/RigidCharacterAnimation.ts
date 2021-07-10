@@ -1,5 +1,6 @@
 import { _decorator, Component, Node, Vec3, MeshRenderer, ccenum, Texture2D, Vec4 } from 'cc';
 import { RigidCharacter } from './RigidCharacter';
+import { RigidCharacterController } from './RigidCharacterController';
 const { ccclass, property, menu } = _decorator;
 
 const vel = new Vec3();
@@ -54,6 +55,8 @@ class AnimationStateMachine {
 export class RigidCharacterAnimation extends Component {
     @property(RigidCharacter)
     character: RigidCharacter = null!;
+    @property(RigidCharacterController)
+    characterController: RigidCharacterController = null!;
 
     @property(AnimationStateMachine)
     characterASM = new AnimationStateMachine();
@@ -78,7 +81,7 @@ export class RigidCharacterAnimation extends Component {
 
         if (this.character.onGround) {
             this.setState(CharacterStates.RUNNING);
-        } else if (this.character.gravity > -20) {
+        } else if (this.characterController.isFlying === 1) {
             this.setState(CharacterStates.GLIDING);
         } else {
             this.setState(CharacterStates.JUMPING);

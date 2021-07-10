@@ -980,6 +980,9 @@
     "character": {
       "__id__": 37
     },
+    "characterController": {
+      "__id__": 40
+    },
     "characterASM": {
       "__id__": 44
     },

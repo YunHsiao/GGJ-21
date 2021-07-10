@@ -66,6 +66,7 @@ export class RigidCharacterController extends Component {
     @property
     jumpRate = 100;
 
+    get isFlying () { return this._flying; }
     get canFly () { return this.flyThreshold > this.character.velocity.y; }
 
     /**
