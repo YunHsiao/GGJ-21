@@ -92,12 +92,12 @@ CCProgram unlit-vs %{
       v_uv = v_uv * tilingOffset.xy + tilingOffset.zw;
       #if USE_SEQUENCE_ANIM
         float seqAnimCurFrame = 0.0;
-        if (seqAnimParams.z > 1.1) { // auto loop
+        if (seqAnimParams.z > 1.1) { // global loop
           float playbackSpeed = seqAnimParams.w * 7.0;
           seqAnimCurFrame = mod(cc_time.x, seqAnimParams.y / playbackSpeed) * playbackSpeed; // iOS precision issue
-        } else if (seqAnimParams.z > 0.1) { // manual clamp
+        } else if (seqAnimParams.z > 0.1) { // local once
           seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, seqAnimParams.y);
-        } else { // manual loop
+        } else { // local loop
           seqAnimCurFrame = mod(seqAnimParams.w, seqAnimParams.y);
         }
         vec2 size = vec2(floor(seqAnimParams.x), fract(seqAnimParams.x) * 10.0);

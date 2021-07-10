@@ -1,41 +1,10 @@
-import { _decorator, Component, Node, Vec3, MeshRenderer, ccenum, Texture2D, Vec4 } from 'cc';
+import { _decorator, Component, Node, Vec3, MeshRenderer, Vec4 } from 'cc';
+import { CharacterStates, fillCharacterParams, fillPlaneParams, PlaneStates, SequenceAnimationInfo } from './animation-data';
 import { RigidCharacter } from './RigidCharacter';
 import { RigidCharacterController } from './RigidCharacterController';
 const { ccclass, property, menu } = _decorator;
 
 const vel = new Vec3();
-
-enum CharacterStates {
-    RUNNING,
-    JUMPING,
-    SLIDING,
-    SLIDING_LOOP,
-    GLIDING,
-    GLIDING_LOOP,
-}
-ccenum(CharacterStates);
-
-enum PlaneStates {
-    HIDDEN,
-    GLIDING_START,
-    GLIDING_END,
-}
-ccenum(PlaneStates);
-
-@ccclass('SequenceAnimationInfo')
-class SequenceAnimationInfo {
-    @property(Texture2D)
-    texture: Texture2D = null;
-
-    @property(Vec4)
-    params = new Vec4(4.1, 4, 0, 0);
-
-    @property
-    playbackSpeed = 1;
-
-    @property
-    nextState = -1;
-}
 
 @ccclass('AnimationStateMachine')
 class AnimationStateMachine {
@@ -62,6 +31,11 @@ export class RigidCharacterAnimation extends Component {
     characterASM = new AnimationStateMachine();
     @property(AnimationStateMachine)
     planeASM = new AnimationStateMachine();
+
+    onLoad () {
+        fillCharacterParams(this.characterASM.animInfo);
+        fillPlaneParams(this.planeASM.animInfo);
+    }
 
     update (dt: number) {
         this.character.getVelocity(vel);

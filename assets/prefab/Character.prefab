@@ -1026,93 +1026,39 @@
     "texture": {
       "__uuid__": "d48becd2-4462-4820-842f-2da57cebba93@6c48a",
       "__expectedType__": "cc.Texture2D"
-    },
-    "params": {
-      "__type__": "cc.Vec4",
-      "x": 4.1,
-      "y": 4,
-      "z": 2,
-      "w": 1
-    },
-    "playbackSpeed": 0,
-    "nextState": -1
+    }
   },
   {
     "__type__": "SequenceAnimationInfo",
-    "texture": null,
-    "params": {
-      "__type__": "cc.Vec4",
-      "x": 4.1,
-      "y": 4,
-      "z": 0,
-      "w": 0
-    },
-    "playbackSpeed": 1,
-    "nextState": -1
-  },
-  {
-    "__type__": "SequenceAnimationInfo",
-    "texture": {
-      "__uuid__": "9d24aacf-889c-48b2-a2dc-fc91ae8cbdc4@6c48a",
-      "__expectedType__": "cc.Texture2D"
-    },
-    "params": {
-      "__type__": "cc.Vec4",
-      "x": 5.1,
-      "y": 5,
-      "z": 1,
-      "w": 0
-    },
-    "playbackSpeed": 1,
-    "nextState": 3
+    "texture": null
   },
   {
     "__type__": "SequenceAnimationInfo",
     "texture": {
       "__uuid__": "fbff6158-31e5-4c9f-9e38-74cf15fb77aa@6c48a",
       "__expectedType__": "cc.Texture2D"
-    },
-    "params": {
-      "__type__": "cc.Vec4",
-      "x": 2.1,
-      "y": 2,
-      "z": 0,
-      "w": 0
-    },
-    "playbackSpeed": 1,
-    "nextState": -1
+    }
+  },
+  {
+    "__type__": "SequenceAnimationInfo",
+    "texture": {
+      "__uuid__": "2c7faace-8b23-4c41-ac98-8dab77c07217@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    }
   },
   {
     "__type__": "SequenceAnimationInfo",
     "texture": {
       "__uuid__": "2c9120d0-f96a-4edd-a832-c996cc45b303@6c48a",
       "__expectedType__": "cc.Texture2D"
-    },
-    "params": {
-      "__type__": "cc.Vec4",
-      "x": 2.2,
-      "y": 4,
-      "z": 1,
-      "w": 0
-    },
-    "playbackSpeed": 2,
-    "nextState": 5
+    }
   },
   {
     "__type__": "SequenceAnimationInfo",
     "texture": {
       "__uuid__": "9e0dfa2d-5796-43a0-b618-f624846bf735@6c48a",
       "__expectedType__": "cc.Texture2D"
-    },
-    "params": {
-      "__type__": "cc.Vec4",
-      "x": 5.4,
-      "y": 19,
-      "z": 0,
-      "w": 0
-    },
-    "playbackSpeed": 2,
-    "nextState": -1
+    }
   },
   {
     "__type__": "AnimationStateMachine",
@@ -1136,48 +1082,21 @@
     "texture": {
       "__uuid__": "c53df9ac-27c2-4429-9add-3078b067f401@6c48a",
       "__expectedType__": "cc.Texture2D"
-    },
-    "params": {
-      "__type__": "cc.Vec4",
-      "x": 3.6,
-      "y": 18,
-      "z": 1,
-      "w": 18
-    },
-    "playbackSpeed": 0,
-    "nextState": -1
+    }
   },
   {
     "__type__": "SequenceAnimationInfo",
     "texture": {
       "__uuid__": "c53df9ac-27c2-4429-9add-3078b067f401@6c48a",
       "__expectedType__": "cc.Texture2D"
-    },
-    "params": {
-      "__type__": "cc.Vec4",
-      "x": 3.6,
-      "y": 18,
-      "z": 1,
-      "w": 10
-    },
-    "playbackSpeed": -4,
-    "nextState": -1
+    }
   },
   {
     "__type__": "SequenceAnimationInfo",
     "texture": {
       "__uuid__": "c53df9ac-27c2-4429-9add-3078b067f401@6c48a",
       "__expectedType__": "cc.Texture2D"
-    },
-    "params": {
-      "__type__": "cc.Vec4",
-      "x": 3.6,
-      "y": 18,
-      "z": 1,
-      "w": 0
-    },
-    "playbackSpeed": 4,
-    "nextState": -1
+    }
   },
   {
     "__type__": "276fcld+b5O8qjGJZTPQFke",
