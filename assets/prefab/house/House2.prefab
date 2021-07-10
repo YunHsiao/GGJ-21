@@ -42,16 +42,16 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 3.399,
-      "y": 0.063,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_lrot": {
       "__type__": "cc.Quat",
       "x": 0,
-      "y": 0,
+      "y": 0.7071067811865475,
       "z": 0,
-      "w": 1
+      "w": 0.7071067811865476
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -63,7 +63,7 @@
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 90,
       "z": 0
     },
     "_id": ""
@@ -570,7 +570,6 @@
       "__uuid__": "c2b8d65d-7176-486f-8a08-ebfc64446181@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
-    "_autoResizeAxis": 0,
     "_transparent": true,
     "_id": ""
   },

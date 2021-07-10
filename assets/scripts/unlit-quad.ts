@@ -34,6 +34,7 @@ const meshInfo = {
     maxPos: new Vec3( 0.5,  0.5, 0),
 };
 const enableBlend = {
+    depthStencilState: { depthWrite: false },
     blendState: { targets: [ {
         blend: true,
         blendSrc: gfx.BlendFactor.SRC_ALPHA,
@@ -42,6 +43,7 @@ const enableBlend = {
     } ] },
 };
 const disableBlend = {
+    depthStencilState: { depthWrite: true },
     blendState: { targets: [ {
         blend: false,
     } ] },

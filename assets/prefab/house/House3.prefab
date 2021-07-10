@@ -120,7 +120,7 @@
     "node": {
       "__id__": 2
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": {
       "__id__": 4
     },
@@ -259,7 +259,7 @@
     "node": {
       "__id__": 9
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": {
       "__id__": 11
     },
@@ -398,7 +398,7 @@
     "node": {
       "__id__": 16
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": {
       "__id__": 18
     },
@@ -540,7 +540,7 @@
     "node": {
       "__id__": 23
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": {
       "__id__": 25
     },
@@ -699,7 +699,6 @@
       "__uuid__": "d0ce03cd-c967-4aa8-a692-fff6133f1bcf@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
-    "_autoResizeAxis": 0,
     "_transparent": true,
     "_id": ""
   },

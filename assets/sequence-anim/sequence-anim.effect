@@ -14,13 +14,6 @@ CCEffect %{
         dimensions:      { value: [2, 2], target: seqAnimParams.xy }
         frames:          { value: 4, target: seqAnimParams.z }
         speedOrProgress: { value: 10, target: seqAnimParams.w }
-      migrations: &migs
-        properties:
-          dimensions:      { formerlySerializedAs: constants.xy }
-          frames:          { formerlySerializedAs: constants.z }
-          speedOrProgress: { formerlySerializedAs: constants.w }
-          mainTexture:     { formerlySerializedAs: seqTexture }
-          mainColor:       { formerlySerializedAs: weight }
   - name: transparent
     passes:
     - vert: unlit-vs:vert
@@ -35,7 +28,6 @@ CCEffect %{
           blendDst: one_minus_src_alpha
           blendDstAlpha: one_minus_src_alpha
       properties: *props
-      migrations: *migs
   - name: add
     passes:
     - vert: unlit-vs:vert
@@ -50,7 +42,6 @@ CCEffect %{
           blendSrcAlpha: src_alpha
           blendDstAlpha: one
       properties: *props
-      migrations: *migs
   - name: alpha-blend
     passes:
     - vert: unlit-vs:vert
@@ -65,7 +56,6 @@ CCEffect %{
           blendSrcAlpha: src_alpha
           blendDstAlpha: one_minus_src_alpha
       properties: *props
-      migrations: *migs
 }%
 
 CCProgram unlit-vs %{
