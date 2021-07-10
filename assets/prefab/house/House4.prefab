@@ -38,7 +38,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": -3.199
+      "z": 0
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -225,7 +225,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 2.125,
-      "z": 1
+      "z": -1
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -364,11 +364,11 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 2.462,
-      "z": 1.332
+      "z": -1.332
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": 0.3826834323650898,
+      "x": -0.3826834323650898,
       "y": 0,
       "z": 0,
       "w": 0.9238795325112867
@@ -382,7 +382,7 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": 45,
+      "x": -45,
       "y": 0,
       "z": 0
     },
@@ -449,7 +449,10 @@
     "__prefab": {
       "__id__": 21
     },
-    "_material": null,
+    "_material": {
+      "__uuid__": "000b2766-f14c-492d-849d-69f8c34a7f4d",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
     "_isTrigger": false,
     "_center": {
       "__type__": "cc.Vec3",
@@ -503,11 +506,11 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 2.45,
-      "z": 0.792
+      "z": -0.792
     },
     "_lrot": {
       "__type__": "cc.Quat",
-      "x": -0.3826834323650898,
+      "x": 0.3826834323650898,
       "y": 0,
       "z": 0,
       "w": 0.9238795325112867
@@ -521,7 +524,7 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": -45,
+      "x": 45,
       "y": 0,
       "z": 0
     },
@@ -588,7 +591,10 @@
     "__prefab": {
       "__id__": 28
     },
-    "_material": null,
+    "_material": {
+      "__uuid__": "000b2766-f14c-492d-849d-69f8c34a7f4d",
+      "__expectedType__": "cc.PhysicsMaterial"
+    },
     "_isTrigger": false,
     "_center": {
       "__type__": "cc.Vec3",
