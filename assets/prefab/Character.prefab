@@ -1030,7 +1030,10 @@
   },
   {
     "__type__": "SequenceAnimationInfo",
-    "texture": null
+    "texture": {
+      "__uuid__": "84fe1c4c-c3a9-4656-80c2-4b9a66d44d4d@6c48a",
+      "__expectedType__": "cc.Texture2D"
+    }
   },
   {
     "__type__": "SequenceAnimationInfo",

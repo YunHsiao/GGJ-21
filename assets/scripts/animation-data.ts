@@ -53,7 +53,7 @@ const characterAnimInfoMap: Record<CharacterStates, IAnimationInfo> = {
         duration: 0.5,
     },
     [CharacterStates.JUMPING]: {
-        width: 4, height: 1,
+        width: 4, height: 2,
         mode: PlaybackMode.LOCAL_ONCE,
     },
     [CharacterStates.SLIDING]: {

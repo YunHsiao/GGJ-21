@@ -49,7 +49,7 @@ export class RigidCharacterAnimation extends Component {
         this.planeASM.model.material.setProperty('seqAnimParams', this.planeASM.stagingParam);
 
         const curAnim = this.characterASM.animInfo[this.characterASM.state];
-        if (curAnim.nextState >= 0 && this.characterASM.stagingParam.w > curAnim.params.y) {
+        if (curAnim.nextState >= 0 && this.characterASM.stagingParam.w > 1) {
             this.setState(curAnim.nextState);
         }
 
