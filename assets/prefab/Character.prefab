@@ -159,7 +159,7 @@
       "__type__": "cc.Vec3",
       "x": -7,
       "y": 3,
-      "z": 5
+      "z": 0.369
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -198,7 +198,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 20,
+    "_orthoHeight": 5,
     "_near": 1,
     "_far": 1000,
     "_color": {
@@ -895,6 +895,7 @@
     "maxSpeed": 5,
     "damping": 0.5,
     "slopeLimit": 30,
+    "bullet": true,
     "gravity": -20,
     "jumpParam": {
       "__id__": 39
@@ -939,11 +940,13 @@
     "moveInAir": false,
     "moveConstant": true,
     "inverseXZ": true,
-    "speed": {
+    "moveSpeed": 1,
+    "maxMoveSpeed": {
       "__type__": "cc.Vec2",
-      "x": 1.5,
-      "y": 0
+      "x": 5,
+      "y": 10
     },
+    "flyThreshold": 0.1,
     "gravity": {
       "__type__": "cc.Vec2",
       "x": -20,
