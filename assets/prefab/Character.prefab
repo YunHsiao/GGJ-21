@@ -826,10 +826,14 @@
     },
     "rotateFactor": 0.4,
     "rotateEnable": false,
+    "moveEnable": true,
+    "moveFrameInterval": 1,
+    "moveInAir": false,
+    "moveConstant": true,
     "inverseXZ": true,
     "speed": {
       "__type__": "cc.Vec2",
-      "x": 1,
+      "x": 1.5,
       "y": 2
     },
     "decayRate": 0.2,
