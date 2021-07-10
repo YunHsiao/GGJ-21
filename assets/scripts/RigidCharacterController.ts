@@ -66,8 +66,6 @@ export class RigidCharacterController extends Component {
      * 1 << 0 can not move
      * 1 << 1 can not rotate
      * 1 << 2 can not jump
-     * 1 << 3 can not run
-     * 1 << 4 can not rush
      */
     protected _constraint = 0;
     protected _jumping = false;
@@ -164,6 +162,7 @@ export class RigidCharacterController extends Component {
                 this.character.maxSpeed = this.maxMoveSpeed.y;
             }
         } else if (this._flying === 1 && (this._isCancelFlying || this.character.contacted)) {
+            this._flying = 2;
             this.character.gravity = this.gravity.x;
             this.character.maxSpeed = this.maxMoveSpeed.x;
         }
