@@ -155,7 +155,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -7,
-      "y": 2,
+      "y": 3,
       "z": 5
     },
     "_lrot": {
@@ -195,7 +195,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 5,
+    "_orthoHeight": 20,
     "_near": 1,
     "_far": 1000,
     "_color": {
@@ -834,9 +834,13 @@
     "speed": {
       "__type__": "cc.Vec2",
       "x": 1.5,
-      "y": 2
+      "y": 0
     },
-    "decayRate": 0.2,
+    "gravity": {
+      "__type__": "cc.Vec2",
+      "x": -20,
+      "y": 0
+    },
     "jumpRate": 100,
     "_id": ""
   },

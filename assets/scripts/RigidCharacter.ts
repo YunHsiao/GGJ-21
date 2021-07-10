@@ -65,8 +65,8 @@ export class RigidCharacter extends Component {
     // @property
     // heightLimit = 0;
 
-    // @property
-    // bullet = true;
+    @property
+    bullet = true;
 
     @property
     gravity = -20;
@@ -78,6 +78,7 @@ export class RigidCharacter extends Component {
     _collider: Collider = null!;
     _grounded = true;
     _toSteep = false;
+    _contacted = false;
     _contacts: ContactPoint[] = [];
     _groundContact: ContactPoint = null!;
     _groundNormal = Vec3.UP.clone();
@@ -87,6 +88,8 @@ export class RigidCharacter extends Component {
     get onGround () { return this._grounded; }
     get velocity () { return this._velocity; }
     get toSteep () { return this._toSteep; }
+    get isFalling () { return this._velocity.y < -1e-7; }
+    get contacted () { return this._contacted; }
 
     start () {
         this._rigidBody = this.getComponent(RigidBody)!;
@@ -94,7 +97,7 @@ export class RigidCharacter extends Component {
         this._collider.on('onCollisionEnter', this.onCollision, this);
         this._collider.on('onCollisionStay', this.onCollision, this);
         this._collider.on('onCollisionExit', this.onCollision, this);
-        // if (this.bullet) useCCD(this._rigidBody);
+        if (this.bullet) useCCD(this._rigidBody);
     }
 
     move (dir: Vec3, speed: number) {
@@ -162,10 +165,12 @@ export class RigidCharacter extends Component {
 
     updateContactInfo () {
         this._grounded = false;
+        this._contacted = false;
         this._groundContact = null!;
         const wp = this.node.worldPosition;
         let maxY = -0.001;
         for (let i = 0; i < this._contacts.length; i++) {
+            this._contacted = true;
             const c = this._contacts[i];
             const n = c.normal, p = c.point;
             if (n.y <= 0.0001) continue;

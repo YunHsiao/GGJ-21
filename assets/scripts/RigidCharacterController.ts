@@ -4,10 +4,8 @@ const { ccclass, property, menu } = _decorator;
 const SystemEventType = SystemEvent.EventType;
 
 enum ECT {
-    CT_MOVE = 1 << 0,
     CT_ROTATE = 1 << 1,
     CT_JUMP = 1 << 2,
-    CT_RUN = 1 << 3,
     CT_RUSH = 1 << 4,
 }
 
@@ -48,13 +46,21 @@ export class RigidCharacterController extends Component {
     inverseXZ = true;
 
     @property
-    speed = new Vec2(); // x for walk, y for run
+    moveSpeed = 1;
 
     @property
-    decayRate = 0.025;
+    maxMoveSpeed = new Vec2(5, 10);
+
+    @property
+    flyThreshold = 1e-1;
+
+    @property
+    gravity = new Vec2(-20, -10);
 
     @property
     jumpRate = 100;
+
+    get canFly () { return this.flyThreshold > this.character.velocity.y; }
 
     /**
      * 1 << 0 can not move
@@ -65,12 +71,13 @@ export class RigidCharacterController extends Component {
      */
     protected _constraint = 0;
     protected _jumping = false;
+    protected _flying = 0; // 0 no second jump, 1 flying, 2 no more secondary jumping
     protected _stateX: number = 0;  // 1 positive, 0 static, -1 negative
     protected _stateZ: number = 0;
     protected _isShiftDown = false;
     protected _isAltDown = false;
     protected _isSpaceDown = false;
-    protected _speed = 0;
+    protected _isCancelFlying = false;
     protected _startAccelerationTime = 0;
     protected _JumpRefreshTime = 0;
 
@@ -109,6 +116,7 @@ export class RigidCharacterController extends Component {
             this._stateX = 0;
         } else if (event.keyCode == macro.KEY.space) {
             this._isSpaceDown = false;
+            this._isCancelFlying = true;
         } else if (event.keyCode == macro.KEY.shift) {
             this._isShiftDown = false;
         } else if (event.keyCode == macro.KEY.alt) {
@@ -135,14 +143,29 @@ export class RigidCharacterController extends Component {
                 this._jumping = false;
                 this._JumpRefreshTime = 0;
             }
+
+            this._flying = 0;
+            this.character.gravity = this.gravity.x;
+            this.character.maxSpeed = this.maxMoveSpeed.x;
         }
 
         // jump
-        if (!(this._constraint & ECT.CT_JUMP) && this._isSpaceDown) {
-            this.character.jump(0);
-            this._jumping = true;
-            this._JumpRefreshTime = this.jumpRate;
-            this._constraint |= ECT.CT_JUMP + ECT.CT_RUN + ECT.CT_ROTATE;
+        if (this._isSpaceDown) {
+            if (!(this._constraint & ECT.CT_JUMP)) {
+                this.character.jump(0);
+                this._jumping = true;
+                this._JumpRefreshTime = this.jumpRate;
+                this._constraint |= ECT.CT_JUMP;
+            } else if (this._flying === 0 && this.canFly) {
+                // fly, secondary jump
+                this._flying = 1;
+                this._isCancelFlying = false;
+                this.character.gravity = this.gravity.y;
+                this.character.maxSpeed = this.maxMoveSpeed.y;
+            }
+        } else if (this._flying === 1 && (this._isCancelFlying || this.character.contacted)) {
+            this.character.gravity = this.gravity.x;
+            this.character.maxSpeed = this.maxMoveSpeed.x;
         }
 
         // rotate
@@ -159,19 +182,12 @@ export class RigidCharacterController extends Component {
 
         // move
         if (this.moveEnable && director.getTotalFrames() % this.moveFrameInterval == 0) {
-            if (!this.moveInAir && !this.character.onGround) return;
+            if (!this.moveInAir && !this.character.onGround && this._flying !== 1) return;
             if (this.moveConstant) this._stateX = 1;
             if (this._stateX || this._stateZ) {
                 this.inverseXZ ? v3_0.set(this._stateZ, 0, -this._stateX) : v3_0.set(this._stateX, 0, this._stateZ);
                 v3_0.normalize();
                 v3_0.negative();
-
-                if (!(this._constraint & ECT.CT_RUN)) {
-                    this._speed = this.speed.y;
-                } else if (!(this._constraint & ECT.CT_MOVE)) {
-                    this._speed = this.speed.x;
-                }
-
                 if (this.rotateEnable) {
                     this.targetOrient.forward = v3_0;
                     v3_0.set(this.currentOrient.forward);
@@ -179,9 +195,9 @@ export class RigidCharacterController extends Component {
                     const qm = this.currentOrient.rotation;
                     const qf = this.targetOrient.rotation;
                     const rs = clamp(this.rotationScalar(qm, qf), 0, 1);
-                    this.character.move(v3_0, this._speed * rs);
+                    this.character.move(v3_0, this.moveSpeed * rs);
                 } else {
-                    this.character.move(v3_0, this._speed);
+                    this.character.move(v3_0, this.moveSpeed);
                 }
             }
         }
