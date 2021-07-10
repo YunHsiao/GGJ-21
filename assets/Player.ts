@@ -19,8 +19,6 @@ export default class Player extends cc.Component {
 
     start () {
         this._rigidBody = this.node.getComponent(cc.RigidBody);
-        cc.director.getPhysicsManager().enabled = true;
-        cc.director.getPhysicsManager().gravity = cc.v2(0, -320);
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, (e: cc.Event.EventKeyboard) => {
             if (e.keyCode === cc.macro.KEY.w) this._verticalDir = 1;
             else if (e.keyCode === cc.macro.KEY.s) this._verticalDir = -1;
