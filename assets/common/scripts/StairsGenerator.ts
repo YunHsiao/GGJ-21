@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, Prefab, loader, instantiate, Vec3 } from 'cc';
+import { _decorator, Component, Node, Prefab, loader, instantiate, Vec3, Collider, PhysicsMaterial } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('StairsGenerator')
@@ -27,8 +27,10 @@ export class StairsGenerator extends Component {
     private static _flag = 0;
     private static _ladder: Prefab | null = null;
     private static _onloaded: Function[] = [];
+    private static _zeroFriction = new PhysicsMaterial();
 
     __preload () {
+        StairsGenerator._zeroFriction.friction = 0;
         const that = StairsGenerator;
         if (that._ladder === null && !(that._flag & 1)) {
             that._flag |= 1 << 0;
@@ -67,6 +69,10 @@ export class StairsGenerator extends Component {
             this.node.addChild(pt);
             const index = (i + 1);
             pt.position = new Vec3(0, s.y / 2 * (index + i), s.z / 2 * (index + i));
+            if (i == this.count - 1) {
+                const col = pt.getComponent(Collider);
+                col.material = StairsGenerator._zeroFriction;
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, EventKeyboard, macro, systemEvent, SystemEvent, Quat, Vec3, Vec2, clamp } from 'cc';
+import { _decorator, Component, Node, EventKeyboard, macro, systemEvent, SystemEvent, Quat, Vec3, Vec2, clamp, director } from 'cc';
 import { RigidCharacter } from './RigidCharacter';
 const { ccclass, property, menu } = _decorator;
 const SystemEventType = SystemEvent.EventType;
@@ -33,6 +33,18 @@ export class RigidCharacterController extends Component {
     rotateEnable = false;
 
     @property
+    moveEnable = false;
+
+    @property
+    moveFrameInterval = 3;
+
+    @property
+    moveInAir = false;
+
+    @property
+    moveConstant = true;
+
+    @property
     inverseXZ = true;
 
     @property
@@ -53,8 +65,6 @@ export class RigidCharacterController extends Component {
      */
     protected _constraint = 0;
     protected _jumping = false;
-    protected _walking = false;
-    protected _running = false;
     protected _stateX: number = 0;  // 1 positive, 0 static, -1 negative
     protected _stateZ: number = 0;
     protected _isShiftDown = false;
@@ -108,13 +118,6 @@ export class RigidCharacterController extends Component {
 
     update (dtS: number) {
         const dt = 1000 / 60;
-
-        // const mx = this.mobileRocker.moveX;
-        // const mz = this.mobileRocker.moveZ;
-        // if ((globalThis as any).CC_BYTEDANCE || sys.isMobile || mx || mz) {
-        //     this._stateX = mx; this._stateZ = mz;
-        // }
-
         this.updateCharacter(dt);
 
         // reset state
@@ -155,30 +158,32 @@ export class RigidCharacterController extends Component {
         }
 
         // move
-        if (this._stateX || this._stateZ) {
-            this.inverseXZ ? v3_0.set(this._stateZ, 0, -this._stateX) : v3_0.set(this._stateX, 0, this._stateZ);
-            v3_0.normalize();
-            v3_0.negative();
-            if (this.rotateEnable) {
-                this.targetOrient.forward = v3_0;
-                v3_0.set(this.currentOrient.forward);
+        if (this.moveEnable && director.getTotalFrames() % this.moveFrameInterval == 0) {
+            if (!this.moveInAir && !this.character.onGround) return;
+            if (this.moveConstant) this._stateX = 1;
+            if (this._stateX || this._stateZ) {
+                this.inverseXZ ? v3_0.set(this._stateZ, 0, -this._stateX) : v3_0.set(this._stateX, 0, this._stateZ);
+                v3_0.normalize();
                 v3_0.negative();
-                const qm = this.currentOrient.rotation;
-                const qf = this.targetOrient.rotation;
-                const rs = clamp(this.rotationScalar(qm, qf), 0, 1);
+
                 if (!(this._constraint & ECT.CT_RUN)) {
                     this._speed = this.speed.y;
                 } else if (!(this._constraint & ECT.CT_MOVE)) {
                     this._speed = this.speed.x;
                 }
-                this.character.move(v3_0, this._speed * rs);
-            } else {
-                this.character.move(v3_0, this._speed);
+
+                if (this.rotateEnable) {
+                    this.targetOrient.forward = v3_0;
+                    v3_0.set(this.currentOrient.forward);
+                    v3_0.negative();
+                    const qm = this.currentOrient.rotation;
+                    const qf = this.targetOrient.rotation;
+                    const rs = clamp(this.rotationScalar(qm, qf), 0, 1);
+                    this.character.move(v3_0, this._speed * rs);
+                } else {
+                    this.character.move(v3_0, this._speed);
+                }
             }
-        } else {
-            this._speed -= this.decayRate;
-            this._walking = false;
-            this._running = false;
         }
     }
 
