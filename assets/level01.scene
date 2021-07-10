@@ -24,17 +24,17 @@
         "__id__": 7
       },
       {
-        "__id__": 332
+        "__id__": 330
       }
     ],
     "_active": true,
     "_components": [],
     "_prefab": {
-      "__id__": 340
+      "__id__": 337
     },
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 350
+      "__id__": 347
     },
     "_id": "521b05a9-f59b-4369-8324-6cfcd19ee2c1"
   },
@@ -217,43 +217,43 @@
         "__id__": 23
       },
       {
-        "__id__": 32
+        "__id__": 30
       },
       {
-        "__id__": 61
+        "__id__": 59
       },
       {
-        "__id__": 72
+        "__id__": 70
       },
       {
-        "__id__": 92
+        "__id__": 90
       },
       {
-        "__id__": 112
+        "__id__": 110
       },
       {
-        "__id__": 123
+        "__id__": 121
       },
       {
-        "__id__": 143
+        "__id__": 141
       },
       {
-        "__id__": 172
+        "__id__": 170
       },
       {
-        "__id__": 201
+        "__id__": 199
       },
       {
-        "__id__": 212
+        "__id__": 210
       },
       {
-        "__id__": 232
+        "__id__": 230
       },
       {
-        "__id__": 256
+        "__id__": 254
       },
       {
-        "__id__": 283
+        "__id__": 281
       }
     ],
     "_active": true,
@@ -274,9 +274,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 6.505,
-      "y": 6.505,
-      "z": 6.505
+      "x": 6,
+      "y": 6,
+      "z": 6
     },
     "_layer": 1073741824,
     "_euler": {
@@ -624,12 +624,6 @@
       },
       {
         "__id__": 29
-      },
-      {
-        "__id__": 30
-      },
-      {
-        "__id__": 31
       }
     ],
     "removedComponents": []
@@ -682,34 +676,6 @@
     }
   },
   {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 27
-    },
-    "propertyPath": [
-      "_prefab",
-      "root"
-    ],
-    "value": {
-      "__id__": 23
-    }
-  },
-  {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 27
-    },
-    "propertyPath": [
-      "_lscale"
-    ],
-    "value": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 3,
-      "z": 3
-    }
-  },
-  {
     "__type__": "cc.Node",
     "_name": "House4",
     "_objFlags": 0,
@@ -718,19 +684,19 @@
     },
     "_children": [
       {
-        "__id__": 33
+        "__id__": 31
       },
       {
-        "__id__": 39
+        "__id__": 37
       },
       {
-        "__id__": 45
+        "__id__": 43
       },
       {
-        "__id__": 51
+        "__id__": 49
       },
       {
-        "__id__": 57
+        "__id__": 55
       }
     ],
     "_active": true,
@@ -769,16 +735,16 @@
     "_name": "Cube",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 32
+      "__id__": 30
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 34
+        "__id__": 32
       },
       {
-        "__id__": 37
+        "__id__": 35
       }
     ],
     "_prefab": null,
@@ -815,11 +781,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 31
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 35
+      "__id__": 33
     },
     "_materials": [
       {
@@ -829,7 +795,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 36
+      "__id__": 34
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -865,11 +831,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 33
+      "__id__": 31
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 38
+      "__id__": 36
     },
     "_material": null,
     "_isTrigger": false,
@@ -882,8 +848,8 @@
     "_size": {
       "__type__": "cc.Vec3",
       "x": 1,
-      "y": 1,
-      "z": 1
+      "y": 1.033,
+      "z": 1.031
     },
     "_id": "88je8AmbtJGq/8Jh3awrUm"
   },
@@ -896,16 +862,16 @@
     "_name": "Cube-001",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 32
+      "__id__": 30
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 40
+        "__id__": 38
       },
       {
-        "__id__": 43
+        "__id__": 41
       }
     ],
     "_prefab": null,
@@ -926,7 +892,7 @@
       "__type__": "cc.Vec3",
       "x": 1,
       "y": 0.25,
-      "z": 0.622
+      "z": 0.662
     },
     "_layer": 1073741824,
     "_euler": {
@@ -942,11 +908,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 39
+      "__id__": 37
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 41
+      "__id__": 39
     },
     "_materials": [
       {
@@ -956,7 +922,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 42
+      "__id__": 40
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -992,11 +958,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 39
+      "__id__": 37
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 44
+      "__id__": 42
     },
     "_material": null,
     "_isTrigger": false,
@@ -1023,24 +989,24 @@
     "_name": "Cube-002",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 32
+      "__id__": 30
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 46
+        "__id__": 44
       },
       {
-        "__id__": 49
+        "__id__": 47
       }
     ],
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 2.155,
-      "z": 1.151
+      "y": 2.182,
+      "z": 1.154
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -1053,7 +1019,7 @@
       "__type__": "cc.Vec3",
       "x": 1,
       "y": 0.227,
-      "z": 1
+      "z": 1.065
     },
     "_layer": 1073741824,
     "_euler": {
@@ -1069,11 +1035,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 45
+      "__id__": 43
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 47
+      "__id__": 45
     },
     "_materials": [
       {
@@ -1083,7 +1049,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 48
+      "__id__": 46
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -1119,11 +1085,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 45
+      "__id__": 43
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 50
+      "__id__": 48
     },
     "_material": {
       "__uuid__": "000b2766-f14c-492d-849d-69f8c34a7f4d",
@@ -1153,24 +1119,24 @@
     "_name": "Cube-003",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 32
+      "__id__": 30
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 52
+        "__id__": 50
       },
       {
-        "__id__": 55
+        "__id__": 53
       }
     ],
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 2.217,
-      "z": 0.057
+      "y": 2.201,
+      "z": 0.061
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -1199,11 +1165,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 51
+      "__id__": 49
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 53
+      "__id__": 51
     },
     "_materials": [
       {
@@ -1213,7 +1179,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 54
+      "__id__": 52
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -1249,11 +1215,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 51
+      "__id__": 49
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 56
+      "__id__": 54
     },
     "_material": {
       "__uuid__": "000b2766-f14c-492d-849d-69f8c34a7f4d",
@@ -1283,13 +1249,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 32
+      "__id__": 30
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 58
+        "__id__": 56
       }
     ],
     "_prefab": null,
@@ -1326,18 +1292,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 57
+      "__id__": 55
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 59
+      "__id__": 57
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 60
+      "__id__": 58
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -1380,13 +1346,13 @@
     },
     "_children": [
       {
-        "__id__": 62
+        "__id__": 60
       },
       {
-        "__id__": 65
+        "__id__": 63
       },
       {
-        "__id__": 68
+        "__id__": 66
       }
     ],
     "_active": true,
@@ -1425,13 +1391,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 61
+      "__id__": 59
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 63
+        "__id__": 61
       }
     ],
     "_prefab": null,
@@ -1468,11 +1434,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 62
+      "__id__": 60
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 64
+      "__id__": 62
     },
     "_material": null,
     "_isTrigger": false,
@@ -1499,13 +1465,13 @@
     "_name": "Node-001",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 61
+      "__id__": 59
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 66
+        "__id__": 64
       }
     ],
     "_prefab": null,
@@ -1542,11 +1508,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 65
+      "__id__": 63
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 67
+      "__id__": 65
     },
     "_material": null,
     "_isTrigger": false,
@@ -1573,13 +1539,13 @@
     "_name": "texture",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 61
+      "__id__": 59
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 69
+        "__id__": 67
       }
     ],
     "_prefab": null,
@@ -1616,18 +1582,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 68
+      "__id__": 66
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 70
+      "__id__": 68
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 71
+      "__id__": 69
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -1670,22 +1636,22 @@
     },
     "_children": [
       {
-        "__id__": 73
+        "__id__": 71
       },
       {
-        "__id__": 76
+        "__id__": 74
       },
       {
-        "__id__": 79
+        "__id__": 77
       },
       {
-        "__id__": 82
+        "__id__": 80
       },
       {
-        "__id__": 85
+        "__id__": 83
       },
       {
-        "__id__": 88
+        "__id__": 86
       }
     ],
     "_active": true,
@@ -1724,13 +1690,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 72
+      "__id__": 70
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 74
+        "__id__": 72
       }
     ],
     "_prefab": null,
@@ -1767,11 +1733,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 73
+      "__id__": 71
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 75
+      "__id__": 73
     },
     "_material": null,
     "_isTrigger": false,
@@ -1798,13 +1764,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 72
+      "__id__": 70
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 77
+        "__id__": 75
       }
     ],
     "_prefab": null,
@@ -1841,11 +1807,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 76
+      "__id__": 74
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 78
+      "__id__": 76
     },
     "_material": null,
     "_isTrigger": false,
@@ -1872,13 +1838,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 72
+      "__id__": 70
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 80
+        "__id__": 78
       }
     ],
     "_prefab": null,
@@ -1915,11 +1881,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 79
+      "__id__": 77
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 81
+      "__id__": 79
     },
     "_material": null,
     "_isTrigger": false,
@@ -1946,13 +1912,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 72
+      "__id__": 70
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 83
+        "__id__": 81
       }
     ],
     "_prefab": null,
@@ -1989,11 +1955,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 82
+      "__id__": 80
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 84
+      "__id__": 82
     },
     "_material": null,
     "_isTrigger": false,
@@ -2020,13 +1986,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 72
+      "__id__": 70
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 86
+        "__id__": 84
       }
     ],
     "_prefab": null,
@@ -2063,11 +2029,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 85
+      "__id__": 83
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 87
+      "__id__": 85
     },
     "_material": null,
     "_isTrigger": false,
@@ -2094,13 +2060,13 @@
     "_name": "texture",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 72
+      "__id__": 70
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 89
+        "__id__": 87
       }
     ],
     "_prefab": null,
@@ -2137,18 +2103,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 88
+      "__id__": 86
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 90
+      "__id__": 88
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 91
+      "__id__": 89
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -2191,22 +2157,22 @@
     },
     "_children": [
       {
-        "__id__": 93
+        "__id__": 91
       },
       {
-        "__id__": 96
+        "__id__": 94
       },
       {
-        "__id__": 99
+        "__id__": 97
       },
       {
-        "__id__": 102
+        "__id__": 100
       },
       {
-        "__id__": 105
+        "__id__": 103
       },
       {
-        "__id__": 108
+        "__id__": 106
       }
     ],
     "_active": true,
@@ -2245,13 +2211,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 92
+      "__id__": 90
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 94
+        "__id__": 92
       }
     ],
     "_prefab": null,
@@ -2288,11 +2254,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 93
+      "__id__": 91
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 95
+      "__id__": 93
     },
     "_material": null,
     "_isTrigger": false,
@@ -2319,13 +2285,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 92
+      "__id__": 90
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 97
+        "__id__": 95
       }
     ],
     "_prefab": null,
@@ -2362,11 +2328,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 96
+      "__id__": 94
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 98
+      "__id__": 96
     },
     "_material": null,
     "_isTrigger": false,
@@ -2393,13 +2359,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 92
+      "__id__": 90
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 100
+        "__id__": 98
       }
     ],
     "_prefab": null,
@@ -2436,11 +2402,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 99
+      "__id__": 97
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 101
+      "__id__": 99
     },
     "_material": null,
     "_isTrigger": false,
@@ -2467,13 +2433,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 92
+      "__id__": 90
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 103
+        "__id__": 101
       }
     ],
     "_prefab": null,
@@ -2510,11 +2476,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 102
+      "__id__": 100
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 104
+      "__id__": 102
     },
     "_material": null,
     "_isTrigger": false,
@@ -2541,13 +2507,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 92
+      "__id__": 90
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 106
+        "__id__": 104
       }
     ],
     "_prefab": null,
@@ -2584,11 +2550,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 105
+      "__id__": 103
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 107
+      "__id__": 105
     },
     "_material": null,
     "_isTrigger": false,
@@ -2615,13 +2581,13 @@
     "_name": "texture",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 92
+      "__id__": 90
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 109
+        "__id__": 107
       }
     ],
     "_prefab": null,
@@ -2658,18 +2624,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 108
+      "__id__": 106
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 110
+      "__id__": 108
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 111
+      "__id__": 109
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -2712,13 +2678,13 @@
     },
     "_children": [
       {
-        "__id__": 113
+        "__id__": 111
       },
       {
-        "__id__": 116
+        "__id__": 114
       },
       {
-        "__id__": 119
+        "__id__": 117
       }
     ],
     "_active": true,
@@ -2757,13 +2723,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 112
+      "__id__": 110
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 114
+        "__id__": 112
       }
     ],
     "_prefab": null,
@@ -2800,11 +2766,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 113
+      "__id__": 111
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 115
+      "__id__": 113
     },
     "_material": null,
     "_isTrigger": false,
@@ -2831,13 +2797,13 @@
     "_name": "Node-001",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 112
+      "__id__": 110
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 117
+        "__id__": 115
       }
     ],
     "_prefab": null,
@@ -2874,11 +2840,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 116
+      "__id__": 114
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 118
+      "__id__": 116
     },
     "_material": null,
     "_isTrigger": false,
@@ -2905,13 +2871,13 @@
     "_name": "texture",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 112
+      "__id__": 110
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 120
+        "__id__": 118
       }
     ],
     "_prefab": null,
@@ -2948,18 +2914,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 119
+      "__id__": 117
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 121
+      "__id__": 119
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 122
+      "__id__": 120
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -3002,22 +2968,22 @@
     },
     "_children": [
       {
-        "__id__": 124
+        "__id__": 122
       },
       {
-        "__id__": 127
+        "__id__": 125
       },
       {
-        "__id__": 130
+        "__id__": 128
       },
       {
-        "__id__": 133
+        "__id__": 131
       },
       {
-        "__id__": 136
+        "__id__": 134
       },
       {
-        "__id__": 139
+        "__id__": 137
       }
     ],
     "_active": true,
@@ -3056,13 +3022,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 123
+      "__id__": 121
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 125
+        "__id__": 123
       }
     ],
     "_prefab": null,
@@ -3099,11 +3065,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 124
+      "__id__": 122
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 126
+      "__id__": 124
     },
     "_material": null,
     "_isTrigger": false,
@@ -3130,13 +3096,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 123
+      "__id__": 121
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 128
+        "__id__": 126
       }
     ],
     "_prefab": null,
@@ -3173,11 +3139,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 127
+      "__id__": 125
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 129
+      "__id__": 127
     },
     "_material": null,
     "_isTrigger": false,
@@ -3204,13 +3170,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 123
+      "__id__": 121
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 131
+        "__id__": 129
       }
     ],
     "_prefab": null,
@@ -3247,11 +3213,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 130
+      "__id__": 128
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 132
+      "__id__": 130
     },
     "_material": null,
     "_isTrigger": false,
@@ -3278,13 +3244,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 123
+      "__id__": 121
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 134
+        "__id__": 132
       }
     ],
     "_prefab": null,
@@ -3321,11 +3287,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 133
+      "__id__": 131
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 135
+      "__id__": 133
     },
     "_material": null,
     "_isTrigger": false,
@@ -3352,13 +3318,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 123
+      "__id__": 121
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 137
+        "__id__": 135
       }
     ],
     "_prefab": null,
@@ -3395,11 +3361,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 136
+      "__id__": 134
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 138
+      "__id__": 136
     },
     "_material": null,
     "_isTrigger": false,
@@ -3426,13 +3392,13 @@
     "_name": "texture",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 123
+      "__id__": 121
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 140
+        "__id__": 138
       }
     ],
     "_prefab": null,
@@ -3469,18 +3435,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 139
+      "__id__": 137
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 141
+      "__id__": 139
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 142
+      "__id__": 140
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -3523,19 +3489,19 @@
     },
     "_children": [
       {
-        "__id__": 144
+        "__id__": 142
       },
       {
-        "__id__": 150
+        "__id__": 148
       },
       {
-        "__id__": 156
+        "__id__": 154
       },
       {
-        "__id__": 162
+        "__id__": 160
       },
       {
-        "__id__": 168
+        "__id__": 166
       }
     ],
     "_active": true,
@@ -3574,16 +3540,16 @@
     "_name": "Cube",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 143
+      "__id__": 141
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 145
+        "__id__": 143
       },
       {
-        "__id__": 148
+        "__id__": 146
       }
     ],
     "_prefab": null,
@@ -3620,11 +3586,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 144
+      "__id__": 142
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 146
+      "__id__": 144
     },
     "_materials": [
       {
@@ -3634,7 +3600,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 147
+      "__id__": 145
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -3670,11 +3636,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 144
+      "__id__": 142
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 149
+      "__id__": 147
     },
     "_material": null,
     "_isTrigger": false,
@@ -3701,16 +3667,16 @@
     "_name": "Cube-001",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 143
+      "__id__": 141
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 151
+        "__id__": 149
       },
       {
-        "__id__": 154
+        "__id__": 152
       }
     ],
     "_prefab": null,
@@ -3747,11 +3713,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 150
+      "__id__": 148
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 152
+      "__id__": 150
     },
     "_materials": [
       {
@@ -3761,7 +3727,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 153
+      "__id__": 151
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -3797,11 +3763,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 150
+      "__id__": 148
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 155
+      "__id__": 153
     },
     "_material": null,
     "_isTrigger": false,
@@ -3828,16 +3794,16 @@
     "_name": "Cube-002",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 143
+      "__id__": 141
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 157
+        "__id__": 155
       },
       {
-        "__id__": 160
+        "__id__": 158
       }
     ],
     "_prefab": null,
@@ -3874,11 +3840,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 156
+      "__id__": 154
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 158
+      "__id__": 156
     },
     "_materials": [
       {
@@ -3888,7 +3854,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 159
+      "__id__": 157
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -3924,11 +3890,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 156
+      "__id__": 154
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 161
+      "__id__": 159
     },
     "_material": {
       "__uuid__": "000b2766-f14c-492d-849d-69f8c34a7f4d",
@@ -3958,16 +3924,16 @@
     "_name": "Cube-003",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 143
+      "__id__": 141
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 163
+        "__id__": 161
       },
       {
-        "__id__": 166
+        "__id__": 164
       }
     ],
     "_prefab": null,
@@ -4004,11 +3970,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 162
+      "__id__": 160
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 164
+      "__id__": 162
     },
     "_materials": [
       {
@@ -4018,7 +3984,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 165
+      "__id__": 163
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -4054,11 +4020,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 162
+      "__id__": 160
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 167
+      "__id__": 165
     },
     "_material": {
       "__uuid__": "000b2766-f14c-492d-849d-69f8c34a7f4d",
@@ -4088,13 +4054,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 143
+      "__id__": 141
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 169
+        "__id__": 167
       }
     ],
     "_prefab": null,
@@ -4131,18 +4097,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 168
+      "__id__": 166
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 170
+      "__id__": 168
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 171
+      "__id__": 169
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -4185,19 +4151,19 @@
     },
     "_children": [
       {
-        "__id__": 173
+        "__id__": 171
       },
       {
-        "__id__": 179
+        "__id__": 177
       },
       {
-        "__id__": 185
+        "__id__": 183
       },
       {
-        "__id__": 191
+        "__id__": 189
       },
       {
-        "__id__": 197
+        "__id__": 195
       }
     ],
     "_active": true,
@@ -4236,16 +4202,16 @@
     "_name": "Cube",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 172
+      "__id__": 170
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 174
+        "__id__": 172
       },
       {
-        "__id__": 177
+        "__id__": 175
       }
     ],
     "_prefab": null,
@@ -4282,11 +4248,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 173
+      "__id__": 171
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 175
+      "__id__": 173
     },
     "_materials": [
       {
@@ -4296,7 +4262,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 176
+      "__id__": 174
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -4332,11 +4298,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 173
+      "__id__": 171
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 178
+      "__id__": 176
     },
     "_material": null,
     "_isTrigger": false,
@@ -4363,16 +4329,16 @@
     "_name": "Cube-001",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 172
+      "__id__": 170
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 180
+        "__id__": 178
       },
       {
-        "__id__": 183
+        "__id__": 181
       }
     ],
     "_prefab": null,
@@ -4409,11 +4375,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 179
+      "__id__": 177
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 181
+      "__id__": 179
     },
     "_materials": [
       {
@@ -4423,7 +4389,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 182
+      "__id__": 180
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -4459,11 +4425,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 179
+      "__id__": 177
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 184
+      "__id__": 182
     },
     "_material": null,
     "_isTrigger": false,
@@ -4490,16 +4456,16 @@
     "_name": "Cube-002",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 172
+      "__id__": 170
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 186
+        "__id__": 184
       },
       {
-        "__id__": 189
+        "__id__": 187
       }
     ],
     "_prefab": null,
@@ -4536,11 +4502,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 185
+      "__id__": 183
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 187
+      "__id__": 185
     },
     "_materials": [
       {
@@ -4550,7 +4516,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 188
+      "__id__": 186
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -4586,11 +4552,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 185
+      "__id__": 183
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 190
+      "__id__": 188
     },
     "_material": {
       "__uuid__": "000b2766-f14c-492d-849d-69f8c34a7f4d",
@@ -4620,16 +4586,16 @@
     "_name": "Cube-003",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 172
+      "__id__": 170
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 192
+        "__id__": 190
       },
       {
-        "__id__": 195
+        "__id__": 193
       }
     ],
     "_prefab": null,
@@ -4666,11 +4632,11 @@
     "_name": "Cube<ModelComponent>",
     "_objFlags": 0,
     "node": {
-      "__id__": 191
+      "__id__": 189
     },
     "_enabled": false,
     "__prefab": {
-      "__id__": 193
+      "__id__": 191
     },
     "_materials": [
       {
@@ -4680,7 +4646,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 194
+      "__id__": 192
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@a804a",
@@ -4716,11 +4682,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 191
+      "__id__": 189
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 196
+      "__id__": 194
     },
     "_material": {
       "__uuid__": "000b2766-f14c-492d-849d-69f8c34a7f4d",
@@ -4750,13 +4716,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 172
+      "__id__": 170
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 198
+        "__id__": 196
       }
     ],
     "_prefab": null,
@@ -4793,18 +4759,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 197
+      "__id__": 195
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 199
+      "__id__": 197
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 200
+      "__id__": 198
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -4847,13 +4813,13 @@
     },
     "_children": [
       {
-        "__id__": 202
+        "__id__": 200
       },
       {
-        "__id__": 205
+        "__id__": 203
       },
       {
-        "__id__": 208
+        "__id__": 206
       }
     ],
     "_active": true,
@@ -4892,13 +4858,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 201
+      "__id__": 199
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 203
+        "__id__": 201
       }
     ],
     "_prefab": null,
@@ -4935,11 +4901,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 202
+      "__id__": 200
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 204
+      "__id__": 202
     },
     "_material": null,
     "_isTrigger": false,
@@ -4966,13 +4932,13 @@
     "_name": "Node-001",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 201
+      "__id__": 199
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 206
+        "__id__": 204
       }
     ],
     "_prefab": null,
@@ -5009,11 +4975,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 205
+      "__id__": 203
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 207
+      "__id__": 205
     },
     "_material": null,
     "_isTrigger": false,
@@ -5040,13 +5006,13 @@
     "_name": "texture",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 201
+      "__id__": 199
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 209
+        "__id__": 207
       }
     ],
     "_prefab": null,
@@ -5083,18 +5049,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 208
+      "__id__": 206
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 210
+      "__id__": 208
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 211
+      "__id__": 209
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -5137,22 +5103,22 @@
     },
     "_children": [
       {
-        "__id__": 213
+        "__id__": 211
       },
       {
-        "__id__": 216
+        "__id__": 214
       },
       {
-        "__id__": 219
+        "__id__": 217
       },
       {
-        "__id__": 222
+        "__id__": 220
       },
       {
-        "__id__": 225
+        "__id__": 223
       },
       {
-        "__id__": 228
+        "__id__": 226
       }
     ],
     "_active": true,
@@ -5191,13 +5157,13 @@
     "_name": "Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 212
+      "__id__": 210
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 214
+        "__id__": 212
       }
     ],
     "_prefab": null,
@@ -5234,11 +5200,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 213
+      "__id__": 211
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 215
+      "__id__": 213
     },
     "_material": null,
     "_isTrigger": false,
@@ -5265,13 +5231,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 212
+      "__id__": 210
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 217
+        "__id__": 215
       }
     ],
     "_prefab": null,
@@ -5308,11 +5274,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 216
+      "__id__": 214
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 218
+      "__id__": 216
     },
     "_material": null,
     "_isTrigger": false,
@@ -5339,13 +5305,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 212
+      "__id__": 210
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 220
+        "__id__": 218
       }
     ],
     "_prefab": null,
@@ -5382,11 +5348,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 219
+      "__id__": 217
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 221
+      "__id__": 219
     },
     "_material": null,
     "_isTrigger": false,
@@ -5413,13 +5379,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 212
+      "__id__": 210
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 223
+        "__id__": 221
       }
     ],
     "_prefab": null,
@@ -5456,11 +5422,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 222
+      "__id__": 220
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 224
+      "__id__": 222
     },
     "_material": null,
     "_isTrigger": false,
@@ -5487,13 +5453,13 @@
     "_name": "box-pre",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 212
+      "__id__": 210
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 226
+        "__id__": 224
       }
     ],
     "_prefab": null,
@@ -5530,11 +5496,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 225
+      "__id__": 223
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 227
+      "__id__": 225
     },
     "_material": null,
     "_isTrigger": false,
@@ -5561,13 +5527,13 @@
     "_name": "texture",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 212
+      "__id__": 210
     },
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 229
+        "__id__": 227
       }
     ],
     "_prefab": null,
@@ -5604,18 +5570,18 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 228
+      "__id__": 226
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 230
+      "__id__": 228
     },
     "_materials": [
       null
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 231
+      "__id__": 229
     },
     "_mesh": null,
     "_shadowCastingMode": 0,
@@ -5656,14 +5622,14 @@
       "__id__": 7
     },
     "_prefab": {
-      "__id__": 233
+      "__id__": 231
     },
     "_id": "feqqYyhZJPRqY4Hp0e99Cx"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 232
+      "__id__": 230
     },
     "asset": {
       "__uuid__": "51b894f9-1deb-4eb4-bb40-4e89666f3ee9",
@@ -5671,7 +5637,7 @@
     },
     "fileId": "17py4oMcVMdLpzq//YOuea",
     "instance": {
-      "__id__": 234
+      "__id__": 232
     }
   },
   {
@@ -5681,7 +5647,13 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
+        "__id__": 233
+      },
+      {
         "__id__": 235
+      },
+      {
+        "__id__": 236
       },
       {
         "__id__": 237
@@ -5693,22 +5665,16 @@
         "__id__": 239
       },
       {
-        "__id__": 240
+        "__id__": 250
       },
       {
-        "__id__": 241
+        "__id__": 251
       },
       {
         "__id__": 252
       },
       {
         "__id__": 253
-      },
-      {
-        "__id__": 254
-      },
-      {
-        "__id__": 255
       }
     ],
     "removedComponents": []
@@ -5716,7 +5682,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 236
+      "__id__": 234
     },
     "propertyPath": [
       "_name"
@@ -5732,7 +5698,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 236
+      "__id__": 234
     },
     "propertyPath": [
       "_lpos"
@@ -5747,7 +5713,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 236
+      "__id__": 234
     },
     "propertyPath": [
       "_lrot"
@@ -5763,20 +5729,20 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 236
+      "__id__": 234
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 232
+      "__id__": 230
     }
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 236
+      "__id__": 234
     },
     "propertyPath": [
       "_lscale"
@@ -5791,14 +5757,14 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 242
+      "__id__": 240
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 243
+      "__id__": 241
     }
   },
   {
@@ -5812,17 +5778,17 @@
     "__type__": "cc.Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 232
+      "__id__": 230
     },
     "_prefab": {
-      "__id__": 244
+      "__id__": 242
     },
     "_id": "a4bwkMrzRB2aUFAiJbQIxO"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 243
+      "__id__": 241
     },
     "asset": {
       "__uuid__": "1b0b8043-a592-4ae0-800e-3b8f8dc1cca0",
@@ -5830,32 +5796,32 @@
     },
     "fileId": "bdI0woxulCDplYqPnloHtG",
     "instance": {
-      "__id__": 245
+      "__id__": 243
     }
   },
   {
     "__type__": "cc.PrefabInstance",
     "fileId": "8bgvoMz7BITJ0RnrVu46b6",
     "prefabRootNode": {
-      "__id__": 232
+      "__id__": 230
     },
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
       {
+        "__id__": 244
+      },
+      {
         "__id__": 246
+      },
+      {
+        "__id__": 247
       },
       {
         "__id__": 248
       },
       {
         "__id__": 249
-      },
-      {
-        "__id__": 250
-      },
-      {
-        "__id__": 251
       }
     ],
     "removedComponents": []
@@ -5863,7 +5829,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 247
+      "__id__": 245
     },
     "propertyPath": [
       "_name"
@@ -5879,7 +5845,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 247
+      "__id__": 245
     },
     "propertyPath": [
       "_lpos"
@@ -5894,7 +5860,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 247
+      "__id__": 245
     },
     "propertyPath": [
       "_lrot"
@@ -5910,20 +5876,20 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 247
+      "__id__": 245
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 243
+      "__id__": 241
     }
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 247
+      "__id__": 245
     },
     "propertyPath": [
       "_lscale"
@@ -5938,7 +5904,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 242
+      "__id__": 240
     },
     "propertyPath": [
       "_prefab",
@@ -5946,13 +5912,13 @@
       "prefabRootNode"
     ],
     "value": {
-      "__id__": 232
+      "__id__": 230
     }
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 242
+      "__id__": 240
     },
     "propertyPath": [
       "_prefab",
@@ -5971,7 +5937,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 242
+      "__id__": 240
     },
     "propertyPath": [
       "_prefab",
@@ -5981,13 +5947,13 @@
       "value"
     ],
     "value": {
-      "__id__": 243
+      "__id__": 241
     }
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 242
+      "__id__": 240
     },
     "propertyPath": [
       "_lpos"
@@ -6006,14 +5972,14 @@
       "__id__": 7
     },
     "_prefab": {
-      "__id__": 257
+      "__id__": 255
     },
     "_id": "1eBV72J0FPmIpNoXAcViXJ"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 256
+      "__id__": 254
     },
     "asset": {
       "__uuid__": "9acf3a39-b6dc-44c8-b210-ad254ae6abd4",
@@ -6021,7 +5987,7 @@
     },
     "fileId": "1f55mROmlGM7gRhOPG4uEv",
     "instance": {
-      "__id__": 258
+      "__id__": 256
     }
   },
   {
@@ -6031,7 +5997,13 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
+        "__id__": 257
+      },
+      {
         "__id__": 259
+      },
+      {
+        "__id__": 260
       },
       {
         "__id__": 261
@@ -6046,10 +6018,10 @@
         "__id__": 264
       },
       {
-        "__id__": 265
+        "__id__": 275
       },
       {
-        "__id__": 266
+        "__id__": 276
       },
       {
         "__id__": 277
@@ -6062,12 +6034,6 @@
       },
       {
         "__id__": 280
-      },
-      {
-        "__id__": 281
-      },
-      {
-        "__id__": 282
       }
     ],
     "removedComponents": []
@@ -6075,7 +6041,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 260
+      "__id__": 258
     },
     "propertyPath": [
       "_name"
@@ -6091,7 +6057,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 260
+      "__id__": 258
     },
     "propertyPath": [
       "_lpos"
@@ -6106,7 +6072,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 260
+      "__id__": 258
     },
     "propertyPath": [
       "_lrot"
@@ -6122,20 +6088,20 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 260
+      "__id__": 258
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 256
+      "__id__": 254
     }
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 260
+      "__id__": 258
     },
     "propertyPath": [
       "_lscale"
@@ -6150,7 +6116,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 260
+      "__id__": 258
     },
     "propertyPath": [
       "_euler"
@@ -6165,14 +6131,14 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 267
+      "__id__": 265
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 268
+      "__id__": 266
     }
   },
   {
@@ -6186,17 +6152,17 @@
     "__type__": "cc.Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 256
+      "__id__": 254
     },
     "_prefab": {
-      "__id__": 269
+      "__id__": 267
     },
     "_id": "df06t+8SZFC64L04LJnx2k"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 268
+      "__id__": 266
     },
     "asset": {
       "__uuid__": "1b0b8043-a592-4ae0-800e-3b8f8dc1cca0",
@@ -6204,32 +6170,32 @@
     },
     "fileId": "bdI0woxulCDplYqPnloHtG",
     "instance": {
-      "__id__": 270
+      "__id__": 268
     }
   },
   {
     "__type__": "cc.PrefabInstance",
     "fileId": "a8Xw/phxlKk6wYdW5Vaq+5",
     "prefabRootNode": {
-      "__id__": 256
+      "__id__": 254
     },
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
       {
+        "__id__": 269
+      },
+      {
         "__id__": 271
+      },
+      {
+        "__id__": 272
       },
       {
         "__id__": 273
       },
       {
         "__id__": 274
-      },
-      {
-        "__id__": 275
-      },
-      {
-        "__id__": 276
       }
     ],
     "removedComponents": []
@@ -6237,7 +6203,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 272
+      "__id__": 270
     },
     "propertyPath": [
       "_name"
@@ -6253,7 +6219,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 272
+      "__id__": 270
     },
     "propertyPath": [
       "_lpos"
@@ -6268,7 +6234,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 272
+      "__id__": 270
     },
     "propertyPath": [
       "_lrot"
@@ -6284,20 +6250,20 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 272
+      "__id__": 270
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 268
+      "__id__": 266
     }
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 272
+      "__id__": 270
     },
     "propertyPath": [
       "_lscale"
@@ -6312,7 +6278,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 267
+      "__id__": 265
     },
     "propertyPath": [
       "_prefab",
@@ -6320,13 +6286,13 @@
       "prefabRootNode"
     ],
     "value": {
-      "__id__": 256
+      "__id__": 254
     }
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 267
+      "__id__": 265
     },
     "propertyPath": [
       "_prefab",
@@ -6336,13 +6302,13 @@
       "value"
     ],
     "value": {
-      "__id__": 268
+      "__id__": 266
     }
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 267
+      "__id__": 265
     },
     "propertyPath": [
       "_prefab",
@@ -6361,7 +6327,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 267
+      "__id__": 265
     },
     "propertyPath": [
       "_lscale"
@@ -6376,7 +6342,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 267
+      "__id__": 265
     },
     "propertyPath": [
       "_prefab",
@@ -6395,7 +6361,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 267
+      "__id__": 265
     },
     "propertyPath": [
       "_lpos"
@@ -6414,14 +6380,14 @@
       "__id__": 7
     },
     "_prefab": {
-      "__id__": 284
+      "__id__": 282
     },
     "_id": "3ccTOm1k5CGKhuX5Jq+LpR"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 283
+      "__id__": 281
     },
     "asset": {
       "__uuid__": "9acf3a39-b6dc-44c8-b210-ad254ae6abd4",
@@ -6429,7 +6395,7 @@
     },
     "fileId": "1f55mROmlGM7gRhOPG4uEv",
     "instance": {
-      "__id__": 285
+      "__id__": 283
     }
   },
   {
@@ -6439,6 +6405,9 @@
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
+      {
+        "__id__": 284
+      },
       {
         "__id__": 286
       },
@@ -6473,7 +6442,7 @@
         "__id__": 306
       },
       {
-        "__id__": 308
+        "__id__": 317
       },
       {
         "__id__": 319
@@ -6491,13 +6460,10 @@
         "__id__": 327
       },
       {
+        "__id__": 328
+      },
+      {
         "__id__": 329
-      },
-      {
-        "__id__": 330
-      },
-      {
-        "__id__": 331
       }
     ],
     "removedComponents": []
@@ -6505,7 +6471,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 287
+      "__id__": 285
     },
     "propertyPath": [
       "_name"
@@ -6521,7 +6487,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 289
+      "__id__": 287
     },
     "propertyPath": [
       "_lpos"
@@ -6542,7 +6508,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 291
+      "__id__": 289
     },
     "propertyPath": [
       "_lrot"
@@ -6564,14 +6530,14 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 293
+      "__id__": 291
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 283
+      "__id__": 281
     }
   },
   {
@@ -6583,7 +6549,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 295
+      "__id__": 293
     },
     "propertyPath": [
       "_lscale"
@@ -6604,7 +6570,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 297
+      "__id__": 295
     },
     "propertyPath": [
       "_euler"
@@ -6625,7 +6591,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 299
+      "__id__": 297
     },
     "propertyPath": [
       "_materials",
@@ -6641,7 +6607,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 301
+      "__id__": 299
     },
     "propertyPath": [
       "_mesh"
@@ -6656,7 +6622,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 303
+      "__id__": 301
     },
     "propertyPath": [
       "_texture"
@@ -6675,14 +6641,14 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 305
+      "__id__": 303
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 283
+      "__id__": 281
     }
   },
   {
@@ -6694,7 +6660,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 307
+      "__id__": 305
     },
     "propertyPath": [
       "_lscale"
@@ -6715,14 +6681,14 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 309
+      "__id__": 307
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 310
+      "__id__": 308
     }
   },
   {
@@ -6736,17 +6702,17 @@
     "__type__": "cc.Node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 283
+      "__id__": 281
     },
     "_prefab": {
-      "__id__": 311
+      "__id__": 309
     },
     "_id": "3bVefO7VRCcbbqC1eXYl1q"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 310
+      "__id__": 308
     },
     "asset": {
       "__uuid__": "1b0b8043-a592-4ae0-800e-3b8f8dc1cca0",
@@ -6754,32 +6720,32 @@
     },
     "fileId": "bdI0woxulCDplYqPnloHtG",
     "instance": {
-      "__id__": 312
+      "__id__": 310
     }
   },
   {
     "__type__": "cc.PrefabInstance",
     "fileId": "a8Xw/phxlKk6wYdW5Vaq+5",
     "prefabRootNode": {
-      "__id__": 283
+      "__id__": 281
     },
     "mountedChildren": [],
     "mountedComponents": [],
     "propertyOverrides": [
       {
+        "__id__": 311
+      },
+      {
         "__id__": 313
+      },
+      {
+        "__id__": 314
       },
       {
         "__id__": 315
       },
       {
         "__id__": 316
-      },
-      {
-        "__id__": 317
-      },
-      {
-        "__id__": 318
       }
     ],
     "removedComponents": []
@@ -6787,7 +6753,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 314
+      "__id__": 312
     },
     "propertyPath": [
       "_name"
@@ -6803,7 +6769,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 314
+      "__id__": 312
     },
     "propertyPath": [
       "_lpos"
@@ -6818,7 +6784,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 314
+      "__id__": 312
     },
     "propertyPath": [
       "_lrot"
@@ -6834,20 +6800,20 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 314
+      "__id__": 312
     },
     "propertyPath": [
       "_prefab",
       "root"
     ],
     "value": {
-      "__id__": 310
+      "__id__": 308
     }
   },
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 314
+      "__id__": 312
     },
     "propertyPath": [
       "_lscale"
@@ -6862,7 +6828,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 320
+      "__id__": 318
     },
     "propertyPath": [
       "_prefab",
@@ -6870,7 +6836,7 @@
       "prefabRootNode"
     ],
     "value": {
-      "__id__": 283
+      "__id__": 281
     }
   },
   {
@@ -6883,7 +6849,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 322
+      "__id__": 320
     },
     "propertyPath": [
       "_prefab",
@@ -6909,7 +6875,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 324
+      "__id__": 322
     },
     "propertyPath": [
       "_prefab",
@@ -6919,7 +6885,7 @@
       "value"
     ],
     "value": {
-      "__id__": 310
+      "__id__": 308
     }
   },
   {
@@ -6932,7 +6898,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 326
+      "__id__": 324
     },
     "propertyPath": [
       "_lpos"
@@ -6954,7 +6920,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 328
+      "__id__": 326
     },
     "propertyPath": [
       "_lscale"
@@ -6976,7 +6942,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 328
+      "__id__": 326
     },
     "propertyPath": [
       "_prefab",
@@ -6996,7 +6962,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 328
+      "__id__": 326
     },
     "propertyPath": [
       "_lrot"
@@ -7012,7 +6978,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 328
+      "__id__": 326
     },
     "propertyPath": [
       "_euler"
@@ -7031,14 +6997,14 @@
       "__id__": 1
     },
     "_prefab": {
-      "__id__": 333
+      "__id__": 331
     },
     "_id": "deI3+/8zVAu4ZEsnxRWic7"
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 332
+      "__id__": 330
     },
     "asset": {
       "__uuid__": "febc3b65-5217-4802-8659-c79a97b4c7eb",
@@ -7046,7 +7012,7 @@
     },
     "fileId": "49+CJ2aY1Byqan68eYf5bv",
     "instance": {
-      "__id__": 334
+      "__id__": 332
     }
   },
   {
@@ -7056,16 +7022,13 @@
     "mountedComponents": [],
     "propertyOverrides": [
       {
+        "__id__": 333
+      },
+      {
         "__id__": 335
       },
       {
-        "__id__": 337
-      },
-      {
-        "__id__": 338
-      },
-      {
-        "__id__": 339
+        "__id__": 336
       }
     ],
     "removedComponents": []
@@ -7073,7 +7036,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 336
+      "__id__": 334
     },
     "propertyPath": [
       "_name"
@@ -7089,7 +7052,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 336
+      "__id__": 334
     },
     "propertyPath": [
       "_lpos"
@@ -7104,7 +7067,7 @@
   {
     "__type__": "CCPropertyOverrideInfo",
     "targetInfo": {
-      "__id__": 336
+      "__id__": 334
     },
     "propertyPath": [
       "_lrot"
@@ -7118,49 +7081,36 @@
     }
   },
   {
-    "__type__": "CCPropertyOverrideInfo",
-    "targetInfo": {
-      "__id__": 336
-    },
-    "propertyPath": [
-      "_prefab",
-      "root"
-    ],
-    "value": {
-      "__id__": 332
-    }
-  },
-  {
     "__type__": "cc.PrefabInfo",
     "fileId": "",
     "targetOverrides": [
+      {
+        "__id__": 338
+      },
       {
         "__id__": 341
       },
       {
         "__id__": 344
-      },
-      {
-        "__id__": 347
       }
     ]
   },
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 332
+      "__id__": 330
     },
     "sourceInfo": {
-      "__id__": 342
+      "__id__": 339
     },
     "propertyPath": [
       "character"
     ],
     "target": {
-      "__id__": 332
+      "__id__": 330
     },
     "targetInfo": {
-      "__id__": 343
+      "__id__": 340
     }
   },
   {
@@ -7178,16 +7128,46 @@
   {
     "__type__": "cc.TargetOverrideInfo",
     "source": {
-      "__id__": 332
+      "__id__": 330
     },
     "sourceInfo": {
-      "__id__": 345
+      "__id__": 342
     },
     "propertyPath": [
       "currentOrient"
     ],
     "target": {
-      "__id__": 332
+      "__id__": 330
+    },
+    "targetInfo": {
+      "__id__": 343
+    }
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "98qV0ZNKdGx7pzWB4wrBQt"
+    ]
+  },
+  {
+    "__type__": "cc.TargetInfo",
+    "localID": [
+      "50EEc9uGBKu6fOaGExxeky"
+    ]
+  },
+  {
+    "__type__": "cc.TargetOverrideInfo",
+    "source": {
+      "__id__": 330
+    },
+    "sourceInfo": {
+      "__id__": 345
+    },
+    "propertyPath": [
+      "targetOrient"
+    ],
+    "target": {
+      "__id__": 330
     },
     "targetInfo": {
       "__id__": 346
@@ -7206,48 +7186,18 @@
     ]
   },
   {
-    "__type__": "cc.TargetOverrideInfo",
-    "source": {
-      "__id__": 332
-    },
-    "sourceInfo": {
-      "__id__": 348
-    },
-    "propertyPath": [
-      "targetOrient"
-    ],
-    "target": {
-      "__id__": 332
-    },
-    "targetInfo": {
-      "__id__": 349
-    }
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "98qV0ZNKdGx7pzWB4wrBQt"
-    ]
-  },
-  {
-    "__type__": "cc.TargetInfo",
-    "localID": [
-      "50EEc9uGBKu6fOaGExxeky"
-    ]
-  },
-  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 351
+      "__id__": 348
     },
     "shadows": {
-      "__id__": 352
+      "__id__": 349
     },
     "_skybox": {
-      "__id__": 353
+      "__id__": 350
     },
     "fog": {
-      "__id__": 354
+      "__id__": 351
     }
   },
   {
