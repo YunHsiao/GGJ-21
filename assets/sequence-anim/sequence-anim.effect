@@ -11,9 +11,7 @@ CCEffect %{
         mainColor:       { value: [1, 1, 1, 1], editor: { type: color } }
         colorScale:      { value: [1, 1, 1], target: colorScaleAndCutoff.xyz }
         alphaThreshold:  { value: 0.5, target: colorScaleAndCutoff.w, editor: { parent: USE_ALPHA_TEST } }
-        dimensions:      { value: [2, 2], target: seqAnimParams.xy }
-        frames:          { value: 4, target: seqAnimParams.z }
-        speedOrProgress: { value: 10, target: seqAnimParams.w }
+        seqAnimParams:   { value: [4.1, 4, 0, 0] }
   - name: transparent
     passes:
     - vert: unlit-vs:vert
@@ -93,11 +91,18 @@ CCProgram unlit-vs %{
       #endif
       v_uv = v_uv * tilingOffset.xy + tilingOffset.zw;
       #if USE_SEQUENCE_ANIM
-        float seqAnimCurFrame = seqAnimParams.w < 0.0 ?
-          clamp(-seqAnimParams.w, 0.0, 0.999) * seqAnimParams.z :
-          mod(cc_time.x, seqAnimParams.z / seqAnimParams.w) * seqAnimParams.w; // iOS precision issue
-        vec2 seqAnimOffset = floor(vec2(mod(seqAnimCurFrame, seqAnimParams.x), seqAnimCurFrame / seqAnimParams.x));
-        v_uv = (v_uv + seqAnimOffset) / seqAnimParams.xy;
+        float seqAnimCurFrame = 0.0;
+        if (seqAnimParams.z > 1.1) { // auto loop
+          float playbackSpeed = seqAnimParams.w * 7.0;
+          seqAnimCurFrame = mod(cc_time.x, seqAnimParams.y / playbackSpeed) * playbackSpeed; // iOS precision issue
+        } else if (seqAnimParams.z > 0.1) { // manual clamp
+          seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, 0.999) * seqAnimParams.y;
+        } else { // manual loop
+          seqAnimCurFrame = fract(seqAnimParams.w) * seqAnimParams.y;
+        }
+        vec2 size = vec2(floor(seqAnimParams.x), fract(seqAnimParams.x) * 10.0);
+        vec2 seqAnimOffset = floor(vec2(mod(seqAnimCurFrame, size.x), seqAnimCurFrame / size.x));
+        v_uv = (v_uv + seqAnimOffset) / size;
       #endif
     #endif
 

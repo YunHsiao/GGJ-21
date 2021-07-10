@@ -32,11 +32,6 @@
       "mainTexture": {
         "__uuid__": "99d6e071-91e1-4b99-802f-3eb4f1155c57@6c48a",
         "__expectedType__": "cc.Texture2D"
-      },
-      "dimensions": {
-        "__type__": "cc.Vec2",
-        "x": 4,
-        "y": 1
       }
     }
   ]
