@@ -46,6 +46,9 @@ export class RigidCharacterController extends Component {
     inverseXZ = true;
 
     @property
+    negativeX = true;
+
+    @property
     moveSpeed = 1;
 
     @property
@@ -186,7 +189,7 @@ export class RigidCharacterController extends Component {
         // move
         if (this.moveEnable && director.getTotalFrames() % this.moveFrameInterval == 0) {
             if (!this.moveInAir && !this.character.onGround && this._flying !== 1) return;
-            if (this.moveConstant) this._stateX = 1;
+            if (this.moveConstant) this._stateX = this.negativeX ? -1 : 1;
             if (this._stateX || this._stateZ) {
                 this.inverseXZ ? v3_0.set(this._stateZ, 0, -this._stateX) : v3_0.set(this._stateX, 0, this._stateZ);
                 v3_0.normalize();
