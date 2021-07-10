@@ -62,8 +62,8 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 4.857,
-      "z": 2.157
+      "y": 0.466,
+      "z": 0
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -732,7 +732,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 2.213,
+      "y": 2.119,
       "z": 0.679
     },
     "_lrot": {
@@ -869,11 +869,11 @@
     "_center": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 0.1,
       "z": 0
     },
     "_radius": 0.3,
-    "_cylinderHeight": 1.15,
+    "_cylinderHeight": 0.8,
     "_direction": 1,
     "_id": ""
   },
@@ -910,7 +910,7 @@
     "__type__": "Character.JumpParam",
     "perpRatio": 0,
     "steepPerpRatio": 0,
-    "height": 20,
+    "height": 5,
     "maxHeight": 1.5
   },
   {
