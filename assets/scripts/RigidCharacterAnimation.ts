@@ -16,7 +16,7 @@ class AnimationStateMachine {
 
     state = 0;
     stagingParam = new Vec4();
-    playbackSpeed = 1;
+    duration = 1;
 }
 
 @ccclass('Character.RigidCharacterAnimation')
@@ -43,10 +43,10 @@ export class RigidCharacterAnimation extends Component {
         this.setFrontDirection(this.planeASM.model.node, vel.z);
 
         // update time
-        this.planeASM.stagingParam.w += this.planeASM.playbackSpeed * 0.1;
-        this.planeASM.model.material.setProperty('seqAnimParams', this.planeASM.stagingParam);
-        this.characterASM.stagingParam.w += this.characterASM.playbackSpeed * 0.1;
+        if (this.characterASM.duration) this.characterASM.stagingParam.w += dt / this.characterASM.duration;
         this.characterASM.model.material.setProperty('seqAnimParams', this.characterASM.stagingParam);
+        if (this.planeASM.duration) this.planeASM.stagingParam.w += dt / this.planeASM.duration;
+        this.planeASM.model.material.setProperty('seqAnimParams', this.planeASM.stagingParam);
 
         const curAnim = this.characterASM.animInfo[this.characterASM.state];
         if (curAnim.nextState >= 0 && this.characterASM.stagingParam.w > curAnim.params.y) {
@@ -78,7 +78,7 @@ export class RigidCharacterAnimation extends Component {
             const planeAnim = this.planeASM.animInfo[planeState];
             this.planeASM.model.material.setProperty('mainTexture', planeAnim.texture);
             Vec4.copy(this.planeASM.stagingParam, planeAnim.params);
-            this.planeASM.playbackSpeed = planeAnim.playbackSpeed;
+            this.planeASM.duration = planeAnim.duration;
             this.planeASM.state = planeState;
         }
 
@@ -86,7 +86,7 @@ export class RigidCharacterAnimation extends Component {
             const characterAnim = this.characterASM.animInfo[state];
             this.characterASM.model.material.setProperty('mainTexture', characterAnim.texture);
             Vec4.copy(this.characterASM.stagingParam, characterAnim.params);
-            this.characterASM.playbackSpeed = characterAnim.playbackSpeed;
+            this.characterASM.duration = characterAnim.duration;
             this.characterASM.state = state;
         }
     }

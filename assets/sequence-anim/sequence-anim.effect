@@ -93,13 +93,13 @@ CCProgram unlit-vs %{
       #if USE_SEQUENCE_ANIM
         float seqAnimCurFrame = 0.0;
         if (seqAnimParams.z > 1.1) { // global loop
-          float playbackSpeed = seqAnimParams.w * 7.0;
-          seqAnimCurFrame = mod(cc_time.x, seqAnimParams.y / playbackSpeed) * playbackSpeed; // iOS precision issue
+          seqAnimCurFrame = seqAnimParams.w != 0.0 ? fract(cc_time.x / seqAnimParams.w) : 0.0;
         } else if (seqAnimParams.z > 0.1) { // local once
-          seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, seqAnimParams.y);
+          seqAnimCurFrame = clamp(seqAnimParams.w, 0.0, 0.999);
         } else { // local loop
-          seqAnimCurFrame = mod(seqAnimParams.w, seqAnimParams.y);
+          seqAnimCurFrame = fract(seqAnimParams.w);
         }
+        seqAnimCurFrame *= seqAnimParams.y;
         vec2 size = vec2(floor(seqAnimParams.x), fract(seqAnimParams.x) * 10.0);
         vec2 seqAnimOffset = floor(vec2(mod(seqAnimCurFrame, size.x), seqAnimCurFrame / size.x));
         v_uv = (v_uv + seqAnimOffset) / size;
