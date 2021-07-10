@@ -89,22 +89,26 @@ export class RigidCharacterAnimation extends Component {
     }
 
     setState (state: CharacterStates) {
-        if (!this.isPlaying(this.characterASM.animInfo, this.characterASM.state, state)) {
-            const characterAnim = this.characterASM.animInfo[state];
-            this.characterASM.model.material.setProperty('mainTexture', characterAnim.texture);
-            Vec4.copy(this.characterASM.stagingParam, characterAnim.params);
-            this.characterASM.playbackSpeed = characterAnim.playbackSpeed;
-            this.characterASM.state = state;
+        let planeState = PlaneStates.HIDDEN;
+        if (this.isPlaying(this.characterASM.animInfo, state, CharacterStates.GLIDING)) {
+            planeState = PlaneStates.GLIDING_START;
+        } else if (this.isPlaying(this.characterASM.animInfo, this.characterASM.state, CharacterStates.GLIDING)) {
+            planeState = PlaneStates.GLIDING_END;
         }
-
-        const planeState = this.isPlaying(this.characterASM.animInfo, state, CharacterStates.GLIDING)
-            ? PlaneStates.GLIDING_START : PlaneStates.GLIDING_END;
         if (!this.isPlaying(this.planeASM.animInfo, this.planeASM.state, planeState)) { // no chaining for now
             const planeAnim = this.planeASM.animInfo[planeState];
             this.planeASM.model.material.setProperty('mainTexture', planeAnim.texture);
             Vec4.copy(this.planeASM.stagingParam, planeAnim.params);
             this.planeASM.playbackSpeed = planeAnim.playbackSpeed;
             this.planeASM.state = planeState;
+        }
+
+        if (!this.isPlaying(this.characterASM.animInfo, this.characterASM.state, state)) {
+            const characterAnim = this.characterASM.animInfo[state];
+            this.characterASM.model.material.setProperty('mainTexture', characterAnim.texture);
+            Vec4.copy(this.characterASM.stagingParam, characterAnim.params);
+            this.characterASM.playbackSpeed = characterAnim.playbackSpeed;
+            this.characterASM.state = state;
         }
     }
 
