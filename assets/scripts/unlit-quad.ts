@@ -1,6 +1,6 @@
 import {
     _decorator, builtinResMgr, gfx, Material, ModelComponent,
-    SpriteFrame, Texture2D, utils, Vec3, Mesh, Vec4,
+    SpriteFrame, Texture2D, utils, Vec3, Mesh, Vec4, ccenum,
 } from 'cc';
 const { ccclass, property } = _decorator;
 
@@ -47,6 +47,13 @@ const disableBlend = {
     } ] },
 };
 
+enum ResizeAxis {
+    NONE,
+    X,
+    Y
+}
+ccenum(ResizeAxis);
+
 @ccclass('UnlitQuadComponent')
 export class UnlitQuadComponent extends ModelComponent {
 
@@ -57,12 +64,11 @@ export class UnlitQuadComponent extends ModelComponent {
     public _texture: Texture2D | null = null;
 
     @property
-    public _autoResize = true;
+    public _autoResizeAxis = ResizeAxis.Y;
 
     @property({ type: Texture2D })
     set texture (val) {
         this._texture = val;
-        if (this._autoResize) this.node.setScale(val.width / val.height, 1, 1);
         this.updateTexture();
     }
     get texture () {
@@ -72,19 +78,18 @@ export class UnlitQuadComponent extends ModelComponent {
     @property({ type: SpriteFrame })
     set spriteFrame (val) {
         this._sprite = val;
-        if (this._autoResize) this.node.setScale(val.width / val.height, 1, 1);
         this.updateTexture();
     }
     get spriteFrame () {
         return this._sprite;
     }
 
-    @property
-    set autoResize (val: boolean) {
-        this._autoResize = val;
+    @property({ type: ResizeAxis })
+    set autoResize (val: ResizeAxis) {
+        this._autoResizeAxis = val;
     }
     get autoResize () {
-        return this._autoResize;
+        return this._autoResizeAxis;
     }
 
     @property
@@ -121,6 +126,12 @@ export class UnlitQuadComponent extends ModelComponent {
         if (typeof binding !== 'number') { return; }
         const target = this._sprite ? this._sprite : this._texture ? this._texture : builtinResMgr.get<Texture2D>('grey-texture');
         pass!.bindTexture(binding, target.getGFXTexture());
+        // update node scale
+        switch (this._autoResizeAxis) {
+            case ResizeAxis.X: this.node.setScale(target.width / target.height, 1, 1); break;
+            case ResizeAxis.Y: this.node.setScale(1, target.height / target.width, 1); break;
+            default: break;
+        }
         // update UV (handle atlas)
         const model = this.model && this.model.subModels[0];
         const ia = model && model.inputAssembler;
