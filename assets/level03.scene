@@ -32,7 +32,7 @@
     "_prefab": null,
     "autoReleaseAssets": false,
     "_globals": {
-      "__id__": 377
+      "__id__": 378
     },
     "_id": "17de6e01-af0a-4d39-a374-6eb5da20d513"
   },
@@ -302,9 +302,9 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 6.505,
-      "y": 6.505,
-      "z": 6.505
+      "x": 6,
+      "y": 6,
+      "z": 6
     },
     "_layer": 1073741824,
     "_euler": {
@@ -2734,7 +2734,7 @@
     "_lscale": {
       "__type__": "cc.Vec3",
       "x": 0.534,
-      "y": 0.3,
+      "y": 0.25,
       "z": 1
     },
     "_layer": 1073741824,
@@ -6629,6 +6629,9 @@
       },
       {
         "__id__": 376
+      },
+      {
+        "__id__": 377
       }
     ],
     "removedComponents": []
@@ -6660,8 +6663,8 @@
     "value": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 4.857,
-      "z": 2.157
+      "y": 14.289,
+      "z": 9.896
     }
   },
   {
@@ -6681,18 +6684,31 @@
     }
   },
   {
+    "__type__": "CCPropertyOverrideInfo",
+    "targetInfo": {
+      "__id__": 374
+    },
+    "propertyPath": [
+      "_prefab",
+      "root"
+    ],
+    "value": {
+      "__id__": 370
+    }
+  },
+  {
     "__type__": "cc.SceneGlobals",
     "ambient": {
-      "__id__": 378
-    },
-    "shadows": {
       "__id__": 379
     },
-    "_skybox": {
+    "shadows": {
       "__id__": 380
     },
-    "fog": {
+    "_skybox": {
       "__id__": 381
+    },
+    "fog": {
+      "__id__": 382
     }
   },
   {
