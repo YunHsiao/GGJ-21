@@ -7378,7 +7378,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": -1,
-      "y": 2.36,
+      "y": 2,
       "z": -13.227
     },
     "_lrot": {
@@ -7433,7 +7433,7 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 4.201680672268908,
+      "x": 8.512735326688816,
       "y": 1,
       "z": 1
     },
@@ -7468,7 +7468,7 @@
     "_enableMorph": true,
     "_sprite": null,
     "_texture": {
-      "__uuid__": "d3ccbf34-7611-4548-9b30-7f271b2cb4ab@6c48a",
+      "__uuid__": "c2aac5be-3ece-47b9-927c-2d4f900ed9b8@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
     "_transparent": true,
@@ -7486,8 +7486,8 @@
     },
     "_bakeable": false,
     "_castShadow": false,
-    "_receiveShadow": false,
-    "_recieveShadow": false,
+    "_receiveShadow": true,
+    "_recieveShadow": true,
     "_lightmapSize": 64
   },
   {

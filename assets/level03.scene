@@ -6313,7 +6313,7 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 4.201680672268908,
+      "x": 4.485023041474655,
       "y": 1,
       "z": 1
     },
@@ -6348,7 +6348,7 @@
     "_enableMorph": true,
     "_sprite": null,
     "_texture": {
-      "__uuid__": "bd275366-03c5-4ff1-b0ef-4357c622f663@6c48a",
+      "__uuid__": "5ded45db-bac7-44b4-a48d-452ce0f9143c@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
     "_transparent": true,
