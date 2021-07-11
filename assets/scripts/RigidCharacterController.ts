@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, EventKeyboard, macro, systemEvent, SystemEvent, Quat, Vec3, Vec2, clamp, director } from 'cc';
+import { _decorator, Component, Node, EventKeyboard, macro, systemEvent, SystemEvent, Quat, Vec3, Vec2, clamp, director, Touch } from 'cc';
 import { RaycastCollect } from './RaycastCollect';
 import { RigidCharacter } from './RigidCharacter';
 const { ccclass, property, menu } = _decorator;
@@ -100,13 +100,25 @@ export class RigidCharacterController extends Component {
     }
 
     protected onEnable () {
+        systemEvent.on(SystemEventType.TOUCH_START, this.onTouchStart, this);
+        systemEvent.on(SystemEventType.TOUCH_END, this.onTouchEnd, this);
         systemEvent.on(SystemEventType.KEY_DOWN, this.onKeyDown, this);
         systemEvent.on(SystemEventType.KEY_UP, this.onKeyUp, this);
     }
 
     protected onDisable () {
+        systemEvent.off(SystemEventType.TOUCH_START, this.onTouchStart, this);
+        systemEvent.off(SystemEventType.TOUCH_END, this.onTouchEnd, this);
         systemEvent.off(SystemEventType.KEY_DOWN, this.onKeyDown, this);
         systemEvent.off(SystemEventType.KEY_UP, this.onKeyUp, this);
+    }
+
+    protected onTouchStart (event: Touch) {
+        this._isSpaceDown = true;
+    }
+
+    protected onTouchEnd (event: Touch) {
+        this._isSpaceDown = false;
     }
 
     protected onKeyDown (event: EventKeyboard) {
