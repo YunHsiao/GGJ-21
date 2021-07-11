@@ -42,14 +42,19 @@ export class CameraClamping extends Component {
 
     followTarget () {
         const wp = this.target.worldPosition;
-        let z = this.node.worldPosition.z;
-        if (z - wp.z > this._offset.z) {
-            z = wp.z + this._offset.z;
+        this.node.getWorldPosition(v3_1);
+        if (Math.abs(wp.z - v3_1.z) > 13) {
+            this.onGameOver();
         }
-        z -= this.increment;
-        v3_1.set(wp.x, wp.y, z).add3f(this._offset.x, this._offset.y, 0)
+
+        if (v3_1.z - wp.z > this._offset.z) {
+            v3_1.z = wp.z + this._offset.z;
+        }
+        v3_1.z -= this.increment;
+        v3_1.set(wp.x, wp.y, v3_1.z).add3f(this._offset.x, this._offset.y, 0)
         v3_1.y = Math.max(v3_1.y, this.minY);
         this.node.worldPosition = v3_1;
+
     }
 
     onGameOver () {
