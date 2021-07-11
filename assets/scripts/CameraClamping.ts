@@ -12,7 +12,7 @@ export class CameraClamping extends Component {
 
     @property
     increment = 0.05;
-    
+
     @property(Node)
     target: Node = null!;
 
@@ -40,5 +40,9 @@ export class CameraClamping extends Component {
         v3_1.set(wp.x, wp.y, z).add3f(this._offset.x, this._offset.y, 0)
         v3_1.y = Math.max(v3_1.y, this.minY);
         this.node.worldPosition = v3_1;
+    }
+
+    switchLevel (level: number) {
+        director.loadScene('level0' + (level + 1));
     }
 }
