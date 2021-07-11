@@ -209,7 +209,7 @@
     "__prefab": {
       "__id__": 10
     },
-    "strength": 10,
+    "strength": 20,
     "direction": {
       "__type__": "cc.Vec3",
       "x": 0,
