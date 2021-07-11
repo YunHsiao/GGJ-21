@@ -70,6 +70,9 @@ export class RigidCharacterController extends Component {
     @property
     jumpRate = 100;
 
+    @property
+    maxVeticalVelocity = 15;
+
     get isFlying () { return this._flying; }
     get canFly () { return this.flyThreshold > this.character.velocity.y; }
     get isBlock () { return Math.abs(this._raycast.hitNormal.z) >= this.blockThreshold; }
@@ -144,6 +147,11 @@ export class RigidCharacterController extends Component {
         this._raycast.updateFunction();
         this.character.updateFunction(dt);
         this.updateCharacter(dt);
+
+        if (this.character.velocity.y > this.maxVeticalVelocity) {
+            this.character.velocity.y = this.maxVeticalVelocity;
+            this.character.rigidBody.setLinearVelocity(this.character.velocity);
+        }
 
         // reset state
         this._isSpaceDown = false;
