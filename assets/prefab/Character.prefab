@@ -61,7 +61,7 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": 0.5,
       "y": 4.857,
       "z": 2.157
     },
@@ -246,6 +246,8 @@
     },
     "minY": 6,
     "increment": 0.05,
+    "gameOverCollider": null,
+    "levelFinishedCollider": null,
     "target": null,
     "_id": ""
   },
@@ -1270,7 +1272,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": {
       "__id__": 64
     },
