@@ -17,5 +17,12 @@
       "1": 7,
       "2": 3
     }
+  },
+  "general": {
+    "designResolution": {
+      "width": 1280,
+      "height": 720,
+      "fitHeight": true
+    }
   }
 }

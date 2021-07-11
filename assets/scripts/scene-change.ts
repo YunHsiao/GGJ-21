@@ -10,13 +10,22 @@ export class SceneChange extends Component {
     // [2]
     // @property
     // serializableDummy = 0;
+    @property(Node)
+    target: Node;
 
     start () {
         // [3]
+        this.target.active = false;
     }
 
     startGame () {
-        director.loadScene('level01');
+        // director.loadScene('level01');
+        this.target.active = true;
+        this.scheduleOnce(function() {
+            // 这里的 this 指向 component
+            // this.doSomething();
+            director.loadScene('level01');
+        }, 14);
     }
 
     backToMeun () {
