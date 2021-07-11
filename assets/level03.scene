@@ -7148,6 +7148,7 @@
     "__prefab": null,
     "minY": 6,
     "increment": 0.05,
+    "curLevel": 2,
     "gameOverCollider": {
       "__id__": 399
     },
@@ -7418,8 +7419,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 480.00000000000006,
-      "y": 320,
+      "x": 640,
+      "y": 360,
       "z": 0
     },
     "_lrot": {
@@ -7500,7 +7501,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 328.2613277133825,
+    "_orthoHeight": 437.68177028451,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -7557,8 +7558,8 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -405,
-      "y": 245,
+      "x": -565,
+      "y": 285,
       "z": 0
     },
     "_lrot": {
@@ -7782,8 +7783,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
+      "width": 1280,
+      "height": 720
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",

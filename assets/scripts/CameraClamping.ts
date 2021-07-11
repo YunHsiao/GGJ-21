@@ -3,8 +3,6 @@ import { _decorator, Component, Node, Vec3, director, Director, Collider } from 
 const { ccclass, property } = _decorator;
 
 const v3_1 = new Vec3();
-let curLevel = 0;
-
 @ccclass('CameraClamping')
 export class CameraClamping extends Component {
 
@@ -13,6 +11,9 @@ export class CameraClamping extends Component {
 
     @property
     increment = 0.05;
+
+    @property
+    curLevel = 0;
 
     @property(Collider)
     gameOverCollider: Collider = null;
@@ -54,15 +55,14 @@ export class CameraClamping extends Component {
         v3_1.set(wp.x, wp.y, v3_1.z).add3f(this._offset.x, this._offset.y, 0)
         v3_1.y = Math.max(v3_1.y, this.minY);
         this.node.worldPosition = v3_1;
-
     }
 
     onGameOver () {
-        this.switchLevel(curLevel);
+        this.switchLevel(this.curLevel);
     }
 
     onLevelFinished () {
-        this.switchLevel(++curLevel);
+        this.switchLevel(this.curLevel + 1);
     }
 
     switchLevel (level: number) {
@@ -70,7 +70,6 @@ export class CameraClamping extends Component {
             director.loadScene('level0' + (level + 1));
         } else {
             director.loadScene('end');
-            curLevel = 0;
         }
     }
 }
