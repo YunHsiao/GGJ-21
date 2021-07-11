@@ -57,16 +57,16 @@ export class RigidCharacterAnimation extends Component {
         node.setScale(Math.abs(scale.x) * (dir > 0.2 ? 1 : -1), scale.y, scale.z);
     }
 
-    setState (state: CharacterStates) {
+    setState (newState: CharacterStates) {
         let planeState = PlaneStates.HIDDEN;
-        if (this.characterASM.isPlaying(state, CharacterStates.GLIDING)) {
+        if (this.characterASM.isPlaying(CharacterStates.GLIDING, newState)) {
             planeState = PlaneStates.GLIDING_START;
-        } else if (this.characterASM.isPlaying(this.characterASM.state, CharacterStates.GLIDING) ||
-                   this.planeASM.isPlaying(this.planeASM.state, PlaneStates.GLIDING_END)) {
+        } else if (this.characterASM.isPlaying(CharacterStates.GLIDING) ||
+                   this.planeASM.isPlaying(PlaneStates.GLIDING_END)) {
             planeState = PlaneStates.GLIDING_END;
         }
 
         this.planeASM.setState(planeState);
-        this.characterASM.setState(state);
+        this.characterASM.setState(newState);
     }
 }

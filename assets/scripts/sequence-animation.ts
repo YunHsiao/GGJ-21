@@ -30,7 +30,7 @@ export class SequenceAnimationState {
     stagingParam = new Vec4();
     duration = 1;
 
-    isPlaying (current: number, target: number) {
+    isPlaying (target: number, current = this.state) {
         while (current !== target) {
             target = this.animInfo[target].nextState;
             if (target < 0) return false;
@@ -39,7 +39,7 @@ export class SequenceAnimationState {
     }
 
     setState (newState: number) {
-        if (!this.isPlaying(this.state, newState)) {
+        if (!this.isPlaying(newState)) {
             const planeAnim = this.animInfo[newState];
             this.model.material.setProperty('mainTexture', planeAnim.texture);
             Vec4.copy(this.stagingParam, planeAnim.params);
