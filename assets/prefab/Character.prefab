@@ -146,7 +146,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 5
@@ -245,6 +245,8 @@
       "__id__": 8
     },
     "minY": 6,
+    "increment": 0.05,
+    "target": null,
     "_id": ""
   },
   {
@@ -1096,7 +1098,7 @@
     "moveEnable": true,
     "moveFrameInterval": 1,
     "moveInAir": false,
-    "moveConstant": false,
+    "moveConstant": true,
     "inverseXZ": true,
     "negativeX": true,
     "moveSpeed": 1,
