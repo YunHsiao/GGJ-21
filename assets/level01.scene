@@ -6355,7 +6355,7 @@
       "y": 1,
       "z": 1
     },
-    "_id": "59FvMlh95ADK8mzT2FQFg/"
+    "_id": "bd6rH8AqpOTKzb+bd2OkqA"
   },
   {
     "__type__": "cc.CompPrefabInfo",
@@ -9930,9 +9930,9 @@
     "_far": 1000,
     "_color": {
       "__type__": "cc.Color",
-      "r": 51,
-      "g": 76,
-      "b": 120,
+      "r": 55,
+      "g": 55,
+      "b": 55,
       "a": 255
     },
     "_depth": 1,
@@ -10383,7 +10383,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 437.68177028451,
+    "_orthoHeight": 360,
     "_near": 1,
     "_far": 2000,
     "_color": {
