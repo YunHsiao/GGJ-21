@@ -1096,7 +1096,7 @@
     "moveEnable": true,
     "moveFrameInterval": 1,
     "moveInAir": false,
-    "moveConstant": true,
+    "moveConstant": false,
     "inverseXZ": true,
     "negativeX": true,
     "moveSpeed": 1,
