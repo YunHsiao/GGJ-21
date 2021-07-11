@@ -15,13 +15,13 @@ export class SceneChange extends Component {
 
     start () {
         // [3]
-        this.target.active = false;
+        if (this.target) this.target.active = false;
     }
 
     startGame () {
         // director.loadScene('level01');
         this.target.active = true;
-        this.scheduleOnce(function() {
+        this.scheduleOnce(function () {
             // 这里的 this 指向 component
             // this.doSomething();
             director.loadScene('level01');
