@@ -102,6 +102,7 @@ export class RigidCharacterController extends Component {
     protected onEnable () {
         systemEvent.on(SystemEventType.TOUCH_START, this.onTouchStart, this);
         systemEvent.on(SystemEventType.TOUCH_END, this.onTouchEnd, this);
+        systemEvent.off(SystemEventType.TOUCH_CANCEL, this.onTouchEnd, this);
         systemEvent.on(SystemEventType.KEY_DOWN, this.onKeyDown, this);
         systemEvent.on(SystemEventType.KEY_UP, this.onKeyUp, this);
     }
@@ -109,6 +110,7 @@ export class RigidCharacterController extends Component {
     protected onDisable () {
         systemEvent.off(SystemEventType.TOUCH_START, this.onTouchStart, this);
         systemEvent.off(SystemEventType.TOUCH_END, this.onTouchEnd, this);
+        systemEvent.off(SystemEventType.TOUCH_CANCEL, this.onTouchEnd, this);
         systemEvent.off(SystemEventType.KEY_DOWN, this.onKeyDown, this);
         systemEvent.off(SystemEventType.KEY_UP, this.onKeyUp, this);
     }
