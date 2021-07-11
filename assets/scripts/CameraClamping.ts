@@ -70,6 +70,7 @@ export class CameraClamping extends Component {
             director.loadScene('level0' + (level + 1));
         } else {
             director.loadScene('end');
+            curLevel = 0;
         }
     }
 }
