@@ -62,10 +62,14 @@ export class CameraClamping extends Component {
     }
 
     onLevelFinished () {
-        this.switchLevel(++curLevel % 3);
+        this.switchLevel(++curLevel);
     }
 
     switchLevel (level: number) {
-        director.loadScene('level0' + (level + 1));
+        if (level < 3) {
+            director.loadScene('level0' + (level + 1));
+        } else {
+            director.loadScene('end');
+        }
     }
 }
