@@ -9,13 +9,13 @@
     "wrapMode": 1,
     "events": [],
     "enableTrsBlending": false,
-    "_duration": 11.016666666666667,
+    "_duration": 8.016666666666667,
     "_keys": [
       [
+        0,
         1,
         5,
-        8.016666666666667,
-        11
+        8
       ]
     ],
     "_stepness": 0,

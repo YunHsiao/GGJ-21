@@ -25,13 +25,13 @@ export class SceneChange extends Component {
             // 这里的 this 指向 component
             // this.doSomething();
             director.loadScene('level01');
-        }, 14);
+        }, 9);
     }
 
     backToMeun () {
         director.loadScene('start');
     }
-    
+
 
 
     // update (deltaTime: number) {

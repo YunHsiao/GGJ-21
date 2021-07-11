@@ -9,7 +9,7 @@
     "wrapMode": 1,
     "events": [],
     "enableTrsBlending": false,
-    "_duration": 14,
+    "_duration": 11,
     "_keys": [
       [
         0,
@@ -22,9 +22,7 @@
         8.033333333333333,
         9,
         10,
-        11,
-        12,
-        14
+        11
       ]
     ],
     "_stepness": 0,
@@ -101,20 +99,6 @@
               "g": 0,
               "b": 0,
               "a": 0
-            },
-            {
-              "__type__": "cc.Color",
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 0
-            },
-            {
-              "__type__": "cc.Color",
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 255
             },
             {
               "__type__": "cc.Color",
