@@ -1,0 +1,52 @@
+{
+  "__type__": "cc.Material",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "5a0614cd-faf0-4b5f-be62-badbb8a9d164",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": "1",
+  "_defines": [
+    {
+      "USE_TEXTURE": true,
+      "USE_SEQUENCE_ANIM": true
+    }
+  ],
+  "_states": [
+    {
+      "rasterizerState": {
+        "cullMode": 0
+      },
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "4e86660d-e32f-4cc0-b8ff-2193b4e7a5d9@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "tilingOffset": {
+        "__type__": "cc.Vec4",
+        "x": 0.25,
+        "y": 0.25,
+        "z": 0.25,
+        "w": 0.25
+      },
+      "seqAnimParams": {
+        "__type__": "cc.Vec4",
+        "x": 2.2,
+        "y": 3,
+        "z": 2,
+        "w": 0.5
+      }
+    }
+  ]
+}
